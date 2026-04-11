@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AccuBotix — Autonomous Pipeline Inspection</title>
+  <meta name="description" content="AI-powered robotic crawlers that see through insulation, hear corrosion forming, and predict failures before they become catastrophes." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ── Hero ── */
+    .hero {
+      background: var(--ink);
+      color: #fff;
+      padding: 7rem 2.5rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 39px,
+        rgba(255,255,255,0.03) 39px,
+        rgba(255,255,255,0.03) 40px
+      );
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-family: var(--display);
+      font-size: clamp(72px, 10vw, 130px);
+      line-height: 0.92;
+      letter-spacing: 2px;
+      max-width: 900px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 em { color: var(--accent); font-style: normal; }
+    .hero-sub {
+      font-size: 18px;
+      color: #a8a8a8;
+      max-width: 560px;
+      margin: 2rem 0 3rem;
+      font-weight: 300;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.08);
+      margin-top: 5rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      position: relative;
+      z-index: 1;
+    }
+    .hero-stat { padding: 2rem 2.5rem; background: var(--ink); }
+    .hero-stat .num {
+      font-family: var(--display);
+      font-size: 52px;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .hero-stat .label {
+      font-size: 13px;
+      color: #777;
+      font-family: var(--mono);
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+
+    /* ── Ticker ── */
+    .ticker {
+      background: var(--accent);
+      color: #fff;
+      padding: 1.2rem 0;
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 1px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .ticker-inner {
+      display: inline-flex;
+      gap: 4rem;
+      animation: ticker-scroll 30s linear infinite;
+    }
+    @keyframes ticker-scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ── Problem / Solution ── */
+    .problem-block {
+      background: var(--ink);
+      color: #fff;
+      padding: 3rem;
+      border-radius: 4px;
+    }
+    .problem-block h3 {
+      font-family: var(--display);
+      font-size: 32px;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+    .problem-list { display: flex; flex-direction: column; gap: 1rem; }
+    .problem-list li {
+      font-size: 15px;
+      color: #ccc;
+      padding-left: 1.5rem;
+      position: relative;
+      font-weight: 300;
+    }
+    .problem-list li::before {
+      content: '//';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 12px;
+    }
+    .solution-block {
+      background: var(--accent2);
+      color: #fff;
+      padding: 3rem;
+      border-radius: 4px;
+    }
+    .solution-block h3 {
+      font-family: var(--display);
+      font-size: 32px;
+      color: #7ec8f0;
+      margin-bottom: 1.5rem;
+    }
+    .solution-list { display: flex; flex-direction: column; gap: 1rem; }
+    .solution-list li {
+      font-size: 15px;
+      color: #d0e8f5;
+      padding-left: 1.5rem;
+      position: relative;
+      font-weight: 300;
+    }
+    .solution-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: #7ec8f0;
+      font-family: var(--mono);
+    }
+
+    /* ── Features Grid ── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .feature-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .feature-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      background: #fde8d8;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+      font-size: 18px;
+    }
+    .feature-card h4 {
+      font-family: var(--display);
+      font-size: 22px;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.5px;
+    }
+    .feature-card p { font-size: 14px; color: var(--muted); font-weight: 300; line-height: 1.65; }
+
+    /* ── Use Cases ── */
+    .use-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      margin-top: 3rem;
+    }
+    .use-item { background: var(--card-bg); padding: 2rem; }
+    .use-num { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 2px; margin-bottom: 0.5rem; }
+    .use-item h5 { font-family: var(--display); font-size: 20px; margin-bottom: 0.5rem; letter-spacing: 0.5px; }
+    .use-item p { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.6; }
+
+    @media (max-width: 768px) {
+      .hero { padding: 4rem 1.25rem 3rem; }
+      .hero-stats { grid-template-columns: 1fr; }
+      .hero-stat { padding: 1.5rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="nav-logo">ACCU<span>BOT</span>IX</a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="technology.html" class="hide-mobile">Technology</a>
+      <a href="product.html" class="hide-mobile">Product</a>
+      <a href="about.html" class="hide-mobile">About</a>
+      <a href="contact.html" class="nav-cta">Request Demo</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-eyebrow">// Pipeline Inspection Reimagined</div>
+    <h1>INSPECT.<br><em>DETECT.</em><br>PREVENT.</h1>
+    <p class="hero-sub">AI-powered robotic crawlers that see through insulation, hear corrosion forming, and predict failures — before they become catastrophes.</p>
+    <div class="hero-actions">
+      <a href="product.html" class="btn-primary">See the Crawler →</a>
+      <a href="contact.html" class="btn-outline">Request a Demo</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="num">±0.1mm</div>
+        <div class="label">// wall thickness resolution</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">360°</div>
+        <div class="label">// visual + thermal coverage</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">3×</div>
+        <div class="label">// sensor fusion — fewer false alarms</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ticker -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-inner">
+      <span>CORROSION-UNDER-INSULATION — THE INVISIBLE KILLER &nbsp;▪&nbsp;</span>
+      <span>$7B+ IN ANNUAL PIPELINE FAILURES GLOBALLY &nbsp;▪&nbsp;</span>
+      <span>MANUAL INSPECTION — SLOW, DANGEROUS, INCOMPLETE &nbsp;▪&nbsp;</span>
+      <span>ACCUBOTIX — AUTONOMOUS. CONTINUOUS. CERTAIN. &nbsp;▪&nbsp;</span>
+      <span>CORROSION-UNDER-INSULATION — THE INVISIBLE KILLER &nbsp;▪&nbsp;</span>
+      <span>$7B+ IN ANNUAL PIPELINE FAILURES GLOBALLY &nbsp;▪&nbsp;</span>
+      <span>MANUAL INSPECTION — SLOW, DANGEROUS, INCOMPLETE &nbsp;▪&nbsp;</span>
+      <span>ACCUBOTIX — AUTONOMOUS. CONTINUOUS. CERTAIN. &nbsp;▪&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- Problem / Solution -->
+  <section style="background: var(--paper);">
+    <div class="section-label">// The Problem We're Solving</div>
+    <div class="section-title">Pipelines fail silently. AccuBotix doesn't let them.</div>
+    <div class="two-col" style="margin-top: 2.5rem;">
+      <div class="problem-block">
+        <h3>THE OLD WAY</h3>
+        <ul class="problem-list">
+          <li>Manual inspection teams access one segment at a time</li>
+          <li>Insulation removed, inspected, re-installed — weeks of downtime</li>
+          <li>No detection until corrosion is already severe</li>
+          <li>Human error, inconsistent data, no historical record</li>
+          <li>Reactive maintenance — fix what already broke</li>
+          <li>High cost, high risk, low coverage</li>
+        </ul>
+      </div>
+      <div class="solution-block">
+        <h3>THE ACCUBOTIX WAY</h3>
+        <ul class="solution-list">
+          <li>Autonomous crawler traverses live pipelines continuously</li>
+          <li>Inspects through insulation — zero removal required</li>
+          <li>Detects defects at sub-millimetre precision, in real time</li>
+          <li>Every scan geotagged, timestamped, stored in digital twin</li>
+          <li>Predictive failure modelling — act before damage occurs</li>
+          <li>Fraction of the cost. Zero unplanned shutdowns.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Features -->
+  <section>
+    <div class="section-label">// Why AccuBotix</div>
+    <div class="section-title">Three sensors. One truth.</div>
+    <p class="section-body">Most inspection tools see one thing. AccuBotix fuses visual, thermal, and acoustic data through a Bayesian AI engine — cross-validating every finding to eliminate false positives and deliver a ranked, actionable repair list.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">&#128065;</div>
+        <h4>Visual AI</h4>
+        <p>360° 4K ring camera with CNN-powered crack and corrosion detection. Catches surface anomalies invisible to the human eye at speed.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#127777;</div>
+        <h4>Thermal Sensing</h4>
+        <p>LWIR microbolometer detects leaks and blockages through insulation by mapping temperature differentials as small as 1°C — no stripping required.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128225;</div>
+        <h4>Acoustic Emission</h4>
+        <p>Dual-mode AE + ultrasonic sensor pinpoints active cracks via TDOA localisation and measures wall thickness to ±0.1mm, catching hidden corrosion early.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#9889;</div>
+        <h4>Edge AI</h4>
+        <p>NVIDIA Jetson Orin NX processes all three sensor streams onboard at &gt;5 FPS per module. No cloud dependency. No latency. Results in real time.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128452;</div>
+        <h4>Digital Asset Twin</h4>
+        <p>Every defect tagged to a Segment ID with precise distance markers. Full material, age, and repair history per pipe section — enabling predictive RUL modelling.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128202;</div>
+        <h4>Auto-Reports + CMMS</h4>
+        <p>PDF inspection reports auto-generated post-run with ranked repair priorities. Direct CMMS/ERP work order triggers on threshold breach. Zero manual admin.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Band -->
+  <div class="quote-band">
+    <blockquote>"The question isn't <em>if</em> your pipeline will corrode. It's whether you'll know about it <em>before</em> it fails."</blockquote>
+    <p class="quote-attr">// AccuBotix — Built for Oil &amp; Gas, Petrochemical &amp; Industrial Plant Operators</p>
+  </div>
+
+  <!-- Use Cases -->
+  <section>
+    <div class="section-label">// Use Cases</div>
+    <div class="section-title">Built for the toughest pipelines on earth.</div>
+    <div class="use-strip">
+      <div class="use-item">
+        <div class="use-num">01 //</div>
+        <h5>Upstream Oil &amp; Gas</h5>
+        <p>Wellhead flow lines, gathering networks, and offshore topsides — inspected at full diameter without production shutdown.</p>
+      </div>
+      <div class="use-item">
+        <div class="use-num">02 //</div>
+        <h5>Refineries &amp; Petrochemical</h5>
+        <p>Process piping running hot fluids under high pressure — continuous wall-loss monitoring under lagging insulation.</p>
+      </div>
+      <div class="use-item">
+        <div class="use-num">03 //</div>
+        <h5>LNG &amp; Gas Transmission</h5>
+        <p>Cryogenic and high-pressure lines where condensate blockages and external corrosion are constant threats.</p>
+      </div>
+      <div class="use-item">
+        <div class="use-num">04 //</div>
+        <h5>Industrial Plants</h5>
+        <p>Steam distribution, cooling water, and utility networks in power plants, chemical facilities, and manufacturing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <a href="index.html" class="footer-logo">ACCU<span>BOT</span>IX</a>
+    <div class="footer-links">
+      <a href="technology.html">Technology</a>
+      <a href="product.html">Product</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>&copy; 2026 AccuBotix Technologies Pvt. Ltd. &middot; Bengaluru, India</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technology — AccuBotix</title>
+  <meta name="description" content="Four integrated technology layers — from physical sensing to cloud intelligence. The science behind AccuBotix's autonomous pipeline inspection platform." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ── Tech Hero ── */
+    .tech-hero {
+      background: var(--ink);
+      color: #fff;
+      padding: 6rem 2.5rem 4rem;
+    }
+    .tech-hero h1 {
+      font-family: var(--display);
+      font-size: clamp(52px, 7vw, 96px);
+      line-height: 0.95;
+      letter-spacing: 2px;
+      margin-bottom: 1.5rem;
+    }
+    .tech-hero h1 em { color: var(--accent); font-style: normal; }
+    .tech-hero p { font-size: 17px; color: #999; max-width: 560px; font-weight: 300; }
+
+    /* ── Tech Layers ── */
+    .layers { padding: 0 2.5rem 5rem; }
+    .tech-layer {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 3rem;
+      padding: 3.5rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+    .tech-layer:last-child { border-bottom: none; }
+    .layer-num {
+      font-family: var(--display);
+      font-size: 90px;
+      color: var(--border);
+      line-height: 1;
+    }
+    .layer-content h3 {
+      font-family: var(--display);
+      font-size: 36px;
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.5px;
+    }
+    .layer-content p {
+      font-size: 15px;
+      color: var(--muted);
+      font-weight: 300;
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+      line-height: 1.75;
+    }
+
+    /* ── Data Flow Pipeline ── */
+    .pipeline-section {
+      background: var(--ink);
+      padding: 4rem 2.5rem;
+    }
+    .pipeline-section h2 {
+      font-family: var(--display);
+      font-size: 36px;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+    .pipeline-section .sub {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: #666;
+      letter-spacing: 2px;
+      margin-bottom: 3rem;
+    }
+    .flow-track {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 0;
+      position: relative;
+    }
+    .flow-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .flow-step:not(:last-child)::after {
+      content: '→';
+      position: absolute;
+      right: -10px;
+      top: 14px;
+      color: var(--accent);
+      font-size: 16px;
+      z-index: 1;
+    }
+    .flow-dot {
+      width: 44px;
+      height: 44px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 0.8rem;
+      flex-shrink: 0;
+    }
+    .flow-label {
+      font-size: 11px;
+      color: #888;
+      font-family: var(--mono);
+      letter-spacing: 0.5px;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    /* ── Simulation Stack ── */
+    .sim-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .sim-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2rem;
+    }
+    .sim-card h4 {
+      font-family: var(--display);
+      font-size: 22px;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.5px;
+    }
+    .sim-card .sim-role {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+    .sim-card p { font-size: 14px; color: var(--muted); font-weight: 300; line-height: 1.65; }
+
+    @media (max-width: 768px) {
+      .tech-hero { padding: 4rem 1.25rem 3rem; }
+      .layers { padding: 0 1.25rem 3.5rem; }
+      .tech-layer { grid-template-columns: 1fr; gap: 0; }
+      .layer-num { font-size: 60px; margin-bottom: 0.5rem; }
+      .flow-track { grid-template-columns: repeat(4, 1fr); row-gap: 2rem; }
+      .pipeline-section { padding: 3rem 1.25rem; }
+    }
+    @media (max-width: 480px) {
+      .flow-track { grid-template-columns: repeat(2, 1fr); }
+      .flow-step:not(:last-child)::after { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="nav-logo">ACCU<span>BOT</span>IX</a>
+    <div class="nav-links">
+      <a href="index.html" class="hide-mobile">Home</a>
+      <a href="technology.html" class="active">Technology</a>
+      <a href="product.html" class="hide-mobile">Product</a>
+      <a href="about.html" class="hide-mobile">About</a>
+      <a href="contact.html" class="nav-cta">Request Demo</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="tech-hero">
+    <div class="section-label">// Under the Hood</div>
+    <h1>THE SCIENCE<br>OF <em>CERTAIN</em><br>INSPECTION.</h1>
+    <p>Four integrated technology layers — from physical sensing to cloud intelligence — engineered to work as one coherent system.</p>
+  </div>
+
+  <!-- Technology Layers -->
+  <div class="layers">
+
+    <div class="tech-layer">
+      <div class="layer-num">01</div>
+      <div class="layer-content">
+        <h3>Crawler Platform</h3>
+        <p>The AccuBotix crawler is a 4WD spring-loaded chassis engineered for DN100 cast iron pipelines. Independent spring-preloaded wheels maintain constant grip through the aluminium cladding — even on 30° inclines and 1 m vertical risers. An articulated hinge mechanism allows the chassis to flex through 90° and 45° bends without wheel slip or sensor head collision.</p>
+        <p>Odometry is handled by quad encoder wheels combined with MPU-9250 IMU dead reckoning, with RFID absolute position resets at every pipe joint for sub-centimetre location accuracy across the full 3.5-hour inspection run.</p>
+        <div class="spec-tags">
+          <span class="spec-tag accent">4WD Spring-Wheel Drive</span>
+          <span class="spec-tag">DN100 Cast Iron</span>
+          <span class="spec-tag">90° + 45° Bend Traversal</span>
+          <span class="spec-tag">30° Incline Rated</span>
+          <span class="spec-tag">1 m Vertical Riser</span>
+          <span class="spec-tag">RFID Odometry Reset</span>
+          <span class="spec-tag">MPU-9250 IMU</span>
+          <span class="spec-tag">3.5 hr Battery Life</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-layer">
+      <div class="layer-num">02</div>
+      <div class="layer-content">
+        <h3>Trimodal Sensor Suite</h3>
+        <p>Three independently validated sensing modalities mounted on a single crawler head, capturing data simultaneously. The 4K 360° visual ring detects surface cracks and corrosion in real time. The LWIR microbolometer (8–14 μm) reads thermal signatures through intact insulation to reveal leaks, blockages, and corrosion-under-insulation (CUI) hot spots — no stripping required.</p>
+        <p>The dual-mode acoustic emission + ultrasonic sensor runs TDOA source localisation for active crack detection and pulse-echo thickness gauging for sub-surface wall loss at ±0.1 mm resolution — all three modalities running in parallel, all in real time.</p>
+        <div class="spec-tags">
+          <span class="spec-tag accent">4K 360° Visual Ring</span>
+          <span class="spec-tag">LWIR 8–14 μm</span>
+          <span class="spec-tag">≥1°C Thermal Sensitivity</span>
+          <span class="spec-tag">40 kHz AE Sensor</span>
+          <span class="spec-tag">±0.1 mm Wall Thickness</span>
+          <span class="spec-tag">TDOA Crack Localisation</span>
+          <span class="spec-tag">CUI Detection</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-layer">
+      <div class="layer-num">03</div>
+      <div class="layer-content">
+        <h3>Edge AI — Jetson Orin NX</h3>
+        <p>Three AI modules run in parallel on the NVIDIA Jetson Orin NX 8GB onboard. A CNN vision model analyses the visual stream at &gt;5 FPS. A statistical thermal anomaly engine processes the FLIR feed. An FFT + LSTM classifier interprets acoustic emission patterns for crack and leak signatures.</p>
+        <p>All three outputs feed into a Bayesian sensor fusion engine that cross-validates detections. A finding confirmed by two or more modalities is elevated to the repair priority list. A single-modality hit is flagged for human review. The result: near-zero false positives and zero cloud dependency during inspection. Dual 512 GB industrial microSD cards provide mirrored, encrypted storage — a single card failure cannot lose data.</p>
+        <div class="spec-tags">
+          <span class="spec-tag accent">Bayesian Sensor Fusion</span>
+          <span class="spec-tag">CNN Vision Model</span>
+          <span class="spec-tag">Statistical Thermal Engine</span>
+          <span class="spec-tag">FFT + LSTM Acoustic</span>
+          <span class="spec-tag">&gt;5 FPS per Module</span>
+          <span class="spec-tag">NVIDIA Jetson Orin NX 8GB</span>
+          <span class="spec-tag">Dual 512 GB Mirrored Storage</span>
+          <span class="spec-tag">ROS 2 Humble</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-layer">
+      <div class="layer-num">04</div>
+      <div class="layer-content">
+        <h3>Cloud Pipeline &amp; Digital Twin</h3>
+        <p>Post-run, the crawler offloads 3.5 hours of triple-sensor recording to AWS S3 or Azure Blob via Wi-Fi in under 30 minutes. A GPU inference pipeline processes the data and attaches Segment ID metadata to every defect record — linking precise pipe location to every finding.</p>
+        <p>The web dashboard surfaces live alerts, auto-generated PDF inspection reports, and CMMS/ERP work order triggers on threshold breach. Each pipe segment builds its own digital twin: material grade, age, operating temperature, full defect history, and a remaining-useful-life (RUL) estimate updated after every inspection run — enabling predictive maintenance at the asset level.</p>
+        <div class="spec-tags">
+          <span class="spec-tag accent">Digital Asset Twin</span>
+          <span class="spec-tag">AWS S3 / Azure Blob</span>
+          <span class="spec-tag">Auto PDF Reports</span>
+          <span class="spec-tag">CMMS / ERP Integration</span>
+          <span class="spec-tag">RUL Predictive Modelling</span>
+          <span class="spec-tag">Segment ID Metadata</span>
+          <span class="spec-tag">&lt;30 min Offload</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Data Flow -->
+  <div class="pipeline-section">
+    <h2>DATA FLOW</h2>
+    <p class="sub">// FROM CRAWLER TO WORK ORDER — END-TO-END</p>
+    <div class="flow-track">
+      <div class="flow-step"><div class="flow-dot">S</div><div class="flow-label">Sensor<br>Capture</div></div>
+      <div class="flow-step"><div class="flow-dot">E</div><div class="flow-label">Edge AI<br>Jetson</div></div>
+      <div class="flow-step"><div class="flow-dot">F</div><div class="flow-label">Bayesian<br>Fusion</div></div>
+      <div class="flow-step"><div class="flow-dot">W</div><div class="flow-label">Wi-Fi<br>Offload</div></div>
+      <div class="flow-step"><div class="flow-dot">C</div><div class="flow-label">Cloud<br>Storage</div></div>
+      <div class="flow-step"><div class="flow-dot">G</div><div class="flow-label">GPU<br>Inference</div></div>
+      <div class="flow-step"><div class="flow-dot">R</div><div class="flow-label">PDF<br>Report</div></div>
+      <div class="flow-step"><div class="flow-dot">&#10003;</div><div class="flow-label">CMMS<br>Work Order</div></div>
+    </div>
+  </div>
+
+  <!-- Digital Twin / Simulation -->
+  <section>
+    <div class="section-label">// Digital Twin</div>
+    <div class="section-title">Simulate before you build. Validate before you deploy.</div>
+    <p class="section-body">AccuBotix develops and validates all navigation algorithms and AI fusion logic in a physics-accurate Gazebo Harmonic simulation before committing to physical hardware — dramatically reducing prototype iterations and cost.</p>
+    <div class="sim-grid">
+      <div class="sim-card">
+        <div class="sim-role">Middleware</div>
+        <h4>ROS 2 Humble</h4>
+        <p>Core robot middleware — identical stack used in simulation and on the physical crawler. Sensor topics, navigation commands, and AI module interfaces are identical in both environments.</p>
+      </div>
+      <div class="sim-card">
+        <div class="sim-role">Physics Simulation</div>
+        <h4>Gazebo Harmonic</h4>
+        <p>3D physics simulation with accurate friction coefficients for DN100 cast iron pipe. CI bend sections, inclines, and the vertical riser are all modelled with real-world surface properties.</p>
+      </div>
+      <div class="sim-card">
+        <div class="sim-role">Navigation</div>
+        <h4>Nav2 Stack</h4>
+        <p>Autonomous path planning through 90° and 45° bends validated in simulation first. Dead-reckoning drift quantified, RFID reset accuracy tested, odometry error logged per metre.</p>
+      </div>
+      <div class="sim-card">
+        <div class="sim-role">Visualisation</div>
+        <h4>RViz2</h4>
+        <p>Real-time visualisation of sensor data, pose estimation, and defect detections during simulation runs. Used to validate Bayesian fusion output against injected defect ground truth.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <a href="index.html" class="footer-logo">ACCU<span>BOT</span>IX</a>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="product.html">Product</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>&copy; 2026 AccuBotix Technologies Pvt. Ltd. &middot; Bengaluru, India</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

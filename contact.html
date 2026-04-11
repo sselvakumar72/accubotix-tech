@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — AccuBotix</title>
+  <meta name="description" content="Request a product demo, discuss a pilot deployment, or explore partnership opportunities with AccuBotix." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ── Contact Hero ── */
+    .contact-hero {
+      background: var(--accent);
+      color: #fff;
+      padding: 6rem 2.5rem 4rem;
+    }
+    .contact-hero h1 {
+      font-family: var(--display);
+      font-size: clamp(52px, 7vw, 96px);
+      line-height: 0.95;
+      letter-spacing: 2px;
+      margin-bottom: 1.5rem;
+    }
+    .contact-hero p { font-size: 17px; color: rgba(255,255,255,0.75); max-width: 480px; font-weight: 300; }
+
+    /* ── Contact Body ── */
+    .contact-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      padding: 5rem 2.5rem;
+      align-items: start;
+    }
+
+    /* ── Form ── */
+    .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+    .form-field { display: flex; flex-direction: column; gap: 6px; }
+    .form-field label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 11px 14px;
+      font-family: var(--body);
+      font-size: 15px;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus { border-color: var(--accent); }
+    .form-field textarea { resize: vertical; min-height: 130px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-note { font-size: 12px; color: var(--muted); font-weight: 300; margin-top: 0.5rem; }
+
+    /* ── Contact Info ── */
+    .contact-info h3 {
+      font-family: var(--display);
+      font-size: 32px;
+      margin-bottom: 2rem;
+      letter-spacing: 0.5px;
+    }
+    .contact-detail {
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .cd-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .cd-value { font-size: 15px; font-weight: 500; }
+    .cd-value a { color: var(--accent); text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color 0.2s; }
+    .cd-value a:hover { text-decoration-color: var(--accent); }
+
+    /* ── What to Expect ── */
+    .expect-box {
+      background: var(--ink);
+      padding: 2rem;
+      border-radius: 4px;
+      margin-top: 2.5rem;
+    }
+    .expect-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+    .expect-list { display: flex; flex-direction: column; gap: 1rem; }
+    .expect-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .expect-num {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--accent);
+      min-width: 24px;
+      padding-top: 2px;
+    }
+    .expect-item p { font-size: 14px; color: #ccc; font-weight: 300; line-height: 1.6; }
+
+    @media (max-width: 768px) {
+      .contact-hero { padding: 4rem 1.25rem 3rem; }
+      .contact-body { grid-template-columns: 1fr; gap: 3rem; padding: 3rem 1.25rem; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="nav-logo">ACCU<span>BOT</span>IX</a>
+    <div class="nav-links">
+      <a href="index.html" class="hide-mobile">Home</a>
+      <a href="technology.html" class="hide-mobile">Technology</a>
+      <a href="product.html" class="hide-mobile">Product</a>
+      <a href="about.html" class="hide-mobile">About</a>
+      <a href="contact.html" class="nav-cta active" style="background: #cf5108;">Request Demo</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="contact-hero">
+    <div class="section-label" style="color: rgba(255,255,255,0.6);">// Get in Touch</div>
+    <h1>LET'S TALK<br>PIPELINES.</h1>
+    <p>Request a product demo, discuss a pilot deployment, or explore partnership opportunities. Our engineering team responds within 24 hours.</p>
+  </div>
+
+  <!-- Contact Body -->
+  <div class="contact-body">
+
+    <!-- Form -->
+    <div>
+      <div class="section-label" style="margin-bottom: 1.5rem;">// Send a Message</div>
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-field">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Organisation name" />
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="email">Work Email</label>
+          <input type="email" id="email" name="email" placeholder="you@company.com" required />
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone (Optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="+91 00000 00000" />
+        </div>
+        <div class="form-field">
+          <label for="interest">Area of Interest</label>
+          <select id="interest" name="interest">
+            <option value="">Select one...</option>
+            <option value="demo">Product Demo — AX-1 Crawler</option>
+            <option value="pilot">Pilot Deployment at Our Facility</option>
+            <option value="technical">Technical Partnership / Integration</option>
+            <option value="investment">Investment / Funding</option>
+            <option value="press">Press / Media Enquiry</option>
+            <option value="general">General Enquiry</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="pipeline">Pipeline Details (Optional)</label>
+          <input type="text" id="pipeline" name="pipeline" placeholder="e.g. DN100 CI, 2 km, refinery steam lines" />
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us about your pipeline infrastructure and inspection challenges..."></textarea>
+        </div>
+        <div>
+          <button type="submit" class="btn-primary">Send Message →</button>
+          <p class="form-note">We respond within 24 hours on business days. Your information is never shared with third parties.</p>
+        </div>
+      </form>
+    </div>
+
+    <!-- Info -->
+    <div>
+      <div class="section-label" style="margin-bottom: 1.5rem;">// Contact Details</div>
+      <div class="contact-info">
+        <div class="contact-detail">
+          <div class="cd-label">General Enquiries</div>
+          <div class="cd-value"><a href="mailto:hello@accubotix.com">hello@accubotix.com</a></div>
+        </div>
+        <div class="contact-detail">
+          <div class="cd-label">Partnerships</div>
+          <div class="cd-value"><a href="mailto:partnerships@accubotix.com">partnerships@accubotix.com</a></div>
+        </div>
+        <div class="contact-detail">
+          <div class="cd-label">Press &amp; Media</div>
+          <div class="cd-value"><a href="mailto:media@accubotix.com">media@accubotix.com</a></div>
+        </div>
+        <div class="contact-detail">
+          <div class="cd-label">Headquarters</div>
+          <div class="cd-value">Bengaluru, Karnataka, India</div>
+        </div>
+        <div class="contact-detail">
+          <div class="cd-label">Demo &amp; Test Facility</div>
+          <div class="cd-value">On-site pilot available — contact us for scheduling</div>
+        </div>
+      </div>
+
+      <div class="expect-box">
+        <div class="expect-label">// What Happens Next</div>
+        <div class="expect-list">
+          <div class="expect-item">
+            <div class="expect-num">01</div>
+            <p>Engineering call within 24 hours to understand your pipeline specifications and inspection challenges</p>
+          </div>
+          <div class="expect-item">
+            <div class="expect-num">02</div>
+            <p>Live or remote demonstration of the AX-1 system against our test facility</p>
+          </div>
+          <div class="expect-item">
+            <div class="expect-num">03</div>
+            <p>Tailored pilot proposal for your facility — pipe diameter, defect types, reporting requirements</p>
+          </div>
+          <div class="expect-item">
+            <div class="expect-num">04</div>
+            <p>Commercial terms and deployment timeline agreed together, including CMMS integration scope</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <a href="index.html" class="footer-logo">ACCU<span>BOT</span>IX</a>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="technology.html">Technology</a>
+      <a href="product.html">Product</a>
+      <a href="about.html">About</a>
+    </div>
+    <div>&copy; 2026 AccuBotix Technologies Pvt. Ltd. &middot; Bengaluru, India</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

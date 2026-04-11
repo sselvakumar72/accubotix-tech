@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product — AccuBotix AX-1 Crawler</title>
+  <meta name="description" content="AccuBotix AX-1 — the first autonomous inspection crawler purpose-built for insulated cast iron pipelines in oil & gas and industrial environments." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ── Product Hero ── */
+    .product-hero {
+      background: var(--accent2);
+      color: #fff;
+      padding: 6rem 2.5rem 4rem;
+    }
+    .product-hero h1 {
+      font-family: var(--display);
+      font-size: clamp(52px, 7vw, 96px);
+      line-height: 0.95;
+      letter-spacing: 2px;
+      margin-bottom: 1.5rem;
+    }
+    .product-hero p { font-size: 17px; color: #b0d4e8; max-width: 560px; font-weight: 300; }
+
+    /* ── Product Cards ── */
+    .products { padding: 4rem 2.5rem 5rem; display: flex; flex-direction: column; gap: 2rem; }
+
+    .product-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .product-card-header {
+      background: var(--ink);
+      color: #fff;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .pcn {
+      font-family: var(--display);
+      font-size: 56px;
+      color: var(--accent);
+      line-height: 1;
+      min-width: 80px;
+    }
+    .product-card-header h3 {
+      font-family: var(--display);
+      font-size: 30px;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    .product-card-header .pck {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: #777;
+      letter-spacing: 1.5px;
+    }
+    .product-card-body { padding: 2.5rem; }
+
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .spec-item { border-left: 2px solid var(--accent); padding-left: 1rem; }
+    .spec-item .sk {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+    .spec-item .sv { font-size: 15px; font-weight: 500; }
+
+    .product-card-body > p {
+      font-size: 15px;
+      color: var(--muted);
+      font-weight: 300;
+      max-width: 740px;
+      margin-bottom: 2rem;
+      line-height: 1.75;
+    }
+
+    /* ── Software Stack Table ── */
+    .sw-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+    .sw-table th {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--muted);
+      text-transform: uppercase;
+      text-align: left;
+      padding: 0.6rem 1rem 0.6rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .sw-table td {
+      font-size: 14px;
+      padding: 0.8rem 1rem 0.8rem 0;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .sw-table td:first-child { font-weight: 500; white-space: nowrap; }
+    .sw-table td:last-child { color: var(--muted); font-weight: 300; }
+    .sw-table tr:last-child td { border-bottom: none; }
+
+    /* ── CTA Strip ── */
+    .cta-strip {
+      background: var(--accent);
+      color: #fff;
+      padding: 4rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .cta-strip h2 {
+      font-family: var(--display);
+      font-size: clamp(32px, 4vw, 52px);
+      letter-spacing: 1px;
+      line-height: 1.0;
+      max-width: 600px;
+    }
+    .btn-white {
+      background: #fff;
+      color: var(--accent);
+      padding: 14px 32px;
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: opacity 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-white:hover { opacity: 0.9; }
+
+    @media (max-width: 768px) {
+      .product-hero { padding: 4rem 1.25rem 3rem; }
+      .products { padding: 3rem 1.25rem; }
+      .product-card-header { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
+      .product-card-body { padding: 1.5rem; }
+      .cta-strip { padding: 3rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="nav-logo">ACCU<span>BOT</span>IX</a>
+    <div class="nav-links">
+      <a href="index.html" class="hide-mobile">Home</a>
+      <a href="technology.html" class="hide-mobile">Technology</a>
+      <a href="product.html" class="active">Product</a>
+      <a href="about.html" class="hide-mobile">About</a>
+      <a href="contact.html" class="nav-cta">Request Demo</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="product-hero">
+    <div class="section-label" style="color: #7ec8f0;">// The Crawler</div>
+    <h1>ONE SYSTEM.<br>TOTAL<br>VISIBILITY.</h1>
+    <p>AccuBotix AX-1 — the first autonomous inspection crawler purpose-built for insulated cast iron pipelines in oil &amp; gas and industrial environments.</p>
+  </div>
+
+  <!-- Products -->
+  <div class="products">
+
+    <!-- AX-1 Crawler -->
+    <div class="product-card">
+      <div class="product-card-header">
+        <div class="pcn">AX-1</div>
+        <div>
+          <h3>AccuBotix AX-1 Crawler</h3>
+          <p class="pck">// Autonomous Pipeline Inspection Platform</p>
+        </div>
+      </div>
+      <div class="product-card-body">
+        <p>The AX-1 is a ruggedised 4WD autonomous crawler designed to traverse DN100 cast iron pipelines under live operating conditions. Spring-loaded wheel assemblies provide constant gripping force through aluminium cladding on inclines up to 30° and full vertical risers. The articulated chassis hinge enables navigation through 90° and 45° elbows without requiring pipeline shutdown or insulation removal.</p>
+        <div class="spec-grid">
+          <div class="spec-item"><div class="sk">Target Pipe</div><div class="sv">DN100 Cast Iron (4")</div></div>
+          <div class="spec-item"><div class="sk">Drive System</div><div class="sv">4WD Spring-loaded wheels</div></div>
+          <div class="spec-item"><div class="sk">Max Incline</div><div class="sv">30° continuous</div></div>
+          <div class="spec-item"><div class="sk">Vertical Capability</div><div class="sv">1 m vertical riser</div></div>
+          <div class="spec-item"><div class="sk">Bend Traversal</div><div class="sv">90° + 45° elbows</div></div>
+          <div class="spec-item"><div class="sk">Battery Life</div><div class="sv">~3.5 hours continuous</div></div>
+          <div class="spec-item"><div class="sk">Compute</div><div class="sv">NVIDIA Jetson Orin NX 8GB</div></div>
+          <div class="spec-item"><div class="sk">Storage</div><div class="sv">Dual 512 GB industrial microSD (mirrored)</div></div>
+          <div class="spec-item"><div class="sk">Odometry</div><div class="sv">Quad encoders + MPU-9250 IMU</div></div>
+          <div class="spec-item"><div class="sk">Position Accuracy</div><div class="sv">Sub-centimetre (RFID + dead reckoning)</div></div>
+          <div class="spec-item"><div class="sk">RFID Resets</div><div class="sv">At every pipe joint</div></div>
+          <div class="spec-item"><div class="sk">Communication</div><div class="sv">Wi-Fi offload post-run</div></div>
+        </div>
+        <div class="spec-tags">
+          <span class="spec-tag accent">No Pipeline Shutdown</span>
+          <span class="spec-tag">Inspects Through Insulation</span>
+          <span class="spec-tag">Zero Insulation Removal</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sensor Head -->
+    <div class="product-card">
+      <div class="product-card-header">
+        <div class="pcn" style="font-size: 38px; padding-top: 10px;">SEN</div>
+        <div>
+          <h3>Trimodal Sensor Head</h3>
+          <p class="pck">// Visual · Thermal · Acoustic — Simultaneous</p>
+        </div>
+      </div>
+      <div class="product-card-body">
+        <p>The sensor head mounts directly to the AX-1 chassis and captures all three modalities simultaneously — visual, thermal, and acoustic — feeding independent AI modules running in parallel on the Jetson Orin NX. Every sensor reading is stamped with Segment ID and precise pipe distance for full spatial traceability.</p>
+        <div class="spec-grid">
+          <div class="spec-item"><div class="sk">Visual</div><div class="sv">4K 360° ring camera array</div></div>
+          <div class="spec-item"><div class="sk">AI Model — Visual</div><div class="sv">CNN crack / corrosion detection</div></div>
+          <div class="spec-item"><div class="sk">Thermal Sensor</div><div class="sv">LWIR uncooled microbolometer</div></div>
+          <div class="spec-item"><div class="sk">Thermal Spectrum</div><div class="sv">8–14 μm</div></div>
+          <div class="spec-item"><div class="sk">Thermal Sensitivity</div><div class="sv">≥1°C differential</div></div>
+          <div class="spec-item"><div class="sk">AI Model — Thermal</div><div class="sv">Statistical anomaly engine</div></div>
+          <div class="spec-item"><div class="sk">Acoustic Mode 1</div><div class="sv">40 kHz AE — crack / leak TDOA</div></div>
+          <div class="spec-item"><div class="sk">Acoustic Mode 2</div><div class="sv">Pulse-echo UT thickness gauging</div></div>
+          <div class="spec-item"><div class="sk">Wall Thickness Resolution</div><div class="sv">±0.1 mm</div></div>
+          <div class="spec-item"><div class="sk">AI Model — Acoustic</div><div class="sv">FFT + LSTM classifier</div></div>
+          <div class="spec-item"><div class="sk">Fusion Engine</div><div class="sv">Bayesian multi-modal cross-validation</div></div>
+          <div class="spec-item"><div class="sk">Inference Speed</div><div class="sv">&gt;5 FPS per modality</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cloud Platform -->
+    <div class="product-card">
+      <div class="product-card-header">
+        <div class="pcn" style="font-size: 38px; padding-top: 10px;">SFT</div>
+        <div>
+          <h3>AccuBotix Cloud Platform</h3>
+          <p class="pck">// Dashboard · Reports · Digital Twin · CMMS Integration</p>
+        </div>
+      </div>
+      <div class="product-card-body">
+        <p>The AccuBotix platform handles everything from raw sensor data to boardroom-ready inspection reports. Upload completes in under 30 minutes. Every pipe segment builds a living digital twin — tracking material grade, operating conditions, defect history, and remaining-useful-life estimates across all inspection runs.</p>
+        <div class="spec-grid">
+          <div class="spec-item"><div class="sk">Cloud Storage</div><div class="sv">AWS S3 / Azure Blob</div></div>
+          <div class="spec-item"><div class="sk">Offload Time</div><div class="sv">&lt;30 min for 3.5 hr session</div></div>
+          <div class="spec-item"><div class="sk">Reports</div><div class="sv">Auto PDF — defect table + images + repair priority</div></div>
+          <div class="spec-item"><div class="sk">Integrations</div><div class="sv">CMMS / ERP work order triggers</div></div>
+          <div class="spec-item"><div class="sk">Digital Twin</div><div class="sv">Per-segment asset database</div></div>
+          <div class="spec-item"><div class="sk">Predictive</div><div class="sv">RUL modelling + failure probability forecasting</div></div>
+          <div class="spec-item"><div class="sk">Middleware</div><div class="sv">ROS 2 Humble</div></div>
+          <div class="spec-item"><div class="sk">Licensing</div><div class="sv">SaaS subscription or on-premise deployment</div></div>
+        </div>
+
+        <p style="margin-top: 2rem; margin-bottom: 1rem; font-size: 14px; font-family: var(--mono); letter-spacing: 2px; color: var(--muted); text-transform: uppercase;">// Open-Source Software Stack</p>
+        <table class="sw-table">
+          <thead>
+            <tr>
+              <th>Tool</th>
+              <th>Purpose</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>ROS 2 Humble</td><td>Robot middleware, sensor topic bus</td><td>ros.org — free</td></tr>
+            <tr><td>OpenCV 4.x</td><td>Visual crack and corrosion detection</td><td>opencv.org — free</td></tr>
+            <tr><td>PyTorch / TensorRT</td><td>CNN vision model + Jetson inference</td><td>pytorch.org — free</td></tr>
+            <tr><td>Mosquitto MQTT</td><td>Lightweight sensor data broker</td><td>mosquitto.org — free</td></tr>
+            <tr><td>Node-RED</td><td>Cloud pipeline and dashboard wiring</td><td>nodered.org — free</td></tr>
+            <tr><td>Gazebo Harmonic</td><td>Digital twin physics simulation</td><td>gazebosim.org — free</td></tr>
+          </tbody>
+        </table>
+
+        <a href="contact.html" class="btn-primary" style="display: inline-block; margin-top: 2rem;">Request Pricing &amp; Demo →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA Strip -->
+  <div class="cta-strip">
+    <h2>READY TO SEE THE AX-1 IN ACTION?</h2>
+    <a href="contact.html" class="btn-white">Schedule a Demo</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <a href="index.html" class="footer-logo">ACCU<span>BOT</span>IX</a>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="technology.html">Technology</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>&copy; 2026 AccuBotix Technologies Pvt. Ltd. &middot; Bengaluru, India</div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
