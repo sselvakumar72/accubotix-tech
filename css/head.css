@@ -255,7 +255,13 @@
   gap: 1.5rem;
   margin-top: 3rem;
 }
+@media (min-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
 .feature-card {
+  background: var(--accent2);
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 2rem;
@@ -279,7 +285,7 @@
   margin-bottom: 0.6rem;
   letter-spacing: 0.5px;
 }
-.feature-card p { font-size: 14px; color: var(--muted); font-weight: 300; line-height: 1.65; }
+.feature-card p { font-size: 14px; color: #d0e8f5; font-weight: 300; line-height: 1.65; }
 
 /* Use Cases */
 .use-strip {
