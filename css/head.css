@@ -256,7 +256,6 @@
   margin-top: 3rem;
 }
 .feature-card {
-  background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 2rem;

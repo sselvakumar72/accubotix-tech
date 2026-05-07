@@ -1,16 +1,62 @@
 /* ============================================================
-   ACCUBOTIX — Global JavaScript
+   AccuBotix — Global JavaScript
    ============================================================ */
 
-/* ── Active nav link highlighting ── */
+/* ── Shared header + active nav state ── */
 (function () {
-  const currentFile = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach(function (link) {
-    const href = link.getAttribute('href');
-    if (href === currentFile) {
+  const headerMount = document.getElementById('site-header');
+  if (!headerMount) {
+    return;
+  }
+
+  headerMount.innerHTML = [
+    '<nav>',
+    '  <a href="index.html" class="nav-logo"><img src="images/logos/AccuBotix%20Logo-196x196.png" alt="AccuBotix" class="nav-logo-img" /></a>',
+    '  <div class="nav-links">',
+    '    <a href="index.html" class="hide-mobile">Home</a>',
+    '    <a href="technology.html" class="hide-mobile">Technology</a>',
+    '    <a href="product.html" class="hide-mobile">Product</a>',
+    '    <a href="about.html" class="hide-mobile">About</a>',
+    '    <a href="contact.html" class="nav-cta">Request Demo</a>',
+    '  </div>',
+    '</nav>'
+  ].join('');
+
+  const page = document.body.getAttribute('data-page');
+  const currentFile = page ? page + '.html' : (window.location.pathname.split('/').pop() || 'index.html');
+  headerMount.querySelectorAll('.nav-links a').forEach(function (link) {
+    if (link.getAttribute('href') === currentFile) {
       link.classList.add('active');
     }
   });
+})();
+
+/* ── Shared footer ── */
+(function () {
+  const footerMount = document.getElementById('site-footer');
+  if (!footerMount) {
+    return;
+  }
+
+  const page = document.body.getAttribute('data-page') || 'index';
+  const links = [
+    { href: 'index.html', label: 'Home', page: 'index' },
+    { href: 'technology.html', label: 'Technology', page: 'technology' },
+    { href: 'product.html', label: 'Product', page: 'product' },
+    { href: 'about.html', label: 'About', page: 'about' },
+    { href: 'contact.html', label: 'Contact', page: 'contact' }
+  ];
+
+  const footerLinks = links
+    .filter(function (item) { return item.page !== page; })
+    .map(function (item) { return '<a href="' + item.href + '">' + item.label + '</a>'; })
+    .join('');
+
+  footerMount.innerHTML = [
+    '<a href="index.html" class="footer-logo">Accu<span class="footer-logo-botix">Botix</span></a>',
+    '<div class="footer-links">' + footerLinks + '</div>',
+    '<div>&copy; 2026 <span class="brand-highlight"><span class="brand-accu">Accu</span><span class="brand-botix">Botix</span></span>Technologix. &middot; Bengaluru, India</div>'
+  ].join('');
 })();
 
 /* ── Smooth scroll for anchor links ── */

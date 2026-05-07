@@ -1,0 +1,45 @@
+/* Shared footer logo styles */
+.footer-logo {
+  font-family: var(--body);
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-transform: none;
+}
+
+.footer-logo-botix {
+  color: #00bfff;
+}
+
+.brand-accu {
+  color: #ffffff;
+  text-transform: none;
+  font-family: var(--body);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.brand-botix {
+  color: #00bfff;
+  text-transform: none;
+  font-family: var(--body);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.brand-botix-deep {
+  color: #1a4a6b;
+  text-transform: none;
+  font-family: var(--body);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.brand-highlight {
+  background: #0a0d0f;
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
