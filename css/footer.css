@@ -43,3 +43,10 @@
   display: inline-block;
 }
 
+[data-brand] {
+  background: #0a0d0f;
+  padding: 2px 8px;
+  border-radius: 12px;
+  display: inline-block;
+}
+

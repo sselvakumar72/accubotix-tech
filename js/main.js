@@ -2,6 +2,15 @@
    AccuBotix — Global JavaScript
    ============================================================ */
 
+const BRAND_OBJECT = {
+  plain: '<span class="brand-accu">Accu</span><span class="brand-botix">Botix</span>',
+  highlight: '<span class="brand-highlight"><span class="brand-accu">Accu</span><span class="brand-botix">Botix</span></span>'
+};
+
+function getBrandMarkup(variant) {
+  return BRAND_OBJECT[variant] || BRAND_OBJECT.plain;
+}
+
 /* ── Shared header + active nav state ── */
 (function () {
   const headerMount = document.getElementById('site-header');
@@ -55,8 +64,15 @@
   footerMount.innerHTML = [
     '<a href="index.html" class="footer-logo">Accu<span class="footer-logo-botix">Botix</span></a>',
     '<div class="footer-links">' + footerLinks + '</div>',
-    '<div>&copy; 2026 <span class="brand-highlight"><span class="brand-accu">Accu</span><span class="brand-botix">Botix</span></span>Technologix. &middot; Bengaluru, India</div>'
+    '<div>&copy; 2026 ' + getBrandMarkup('highlight') + ' Technologix. &middot; Bengaluru, India</div>'
   ].join('');
+})();
+
+/* ── Reusable brand object renderer ── */
+(function () {
+  document.querySelectorAll('[data-brand]').forEach(function (node) {
+    node.innerHTML = getBrandMarkup(node.getAttribute('data-brand'));
+  });
 })();
 
 /* ── Smooth scroll for anchor links ── */
