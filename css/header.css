@@ -303,17 +303,17 @@
   .features-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 .feature-card {
-  background: var(--accent2);
-  border: 1px solid var(--border);
-  border-radius: 4px;
+  background: var(--card-bg);
+  border: 4px solid var(--border);
+  border-radius: 6px;
   padding: 2rem;
   transition: border-color 0.2s, transform 0.2s;
 }
-.feature-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+.feature-card:hover { border-color: #1a4a6b; transform: translateY(-10px); }
 .feature-icon {
   width: 40px; height: 40px;
   background: #fde8d8;
-  border-radius: 2px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -322,25 +322,35 @@
 }
 .feature-card h4 {
   font-family: var(--display);
-  font-size: 22px;
-  margin-bottom: 0.6rem;
+  font-size: 20px;
+  margin-bottom: 0.5rem;
   letter-spacing: 0.5px;
-  color: #fff;
+  color: var(--ink);
 }
-.feature-card p { font-size: 14px; color: #d0e8f5; font-weight: 300; line-height: 1.65; }
+.feature-card p { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.6; }
 
 /* Use Cases */
 .use-strip {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1px;
-  background: var(--border);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
   margin-top: 3rem;
 }
-.use-item { background: var(--card-bg); padding: 2rem; }
+.use-item {
+  background: var(--card-bg);
+  border: 4px solid var(--border);
+  border-radius: 6px;
+  padding: 2rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.use-item:hover { border-color: #1a4a6b; transform: translateY(-10px); }
 .use-num { font-family: var(--mono); font-size: 11px; color: var(--accent); letter-spacing: 2px; margin-bottom: 0.5rem; }
-.use-item h5 { font-family: var(--display); font-size: 20px; margin-bottom: 0.5rem; letter-spacing: 0.5px; }
+.use-item h5 { font-family: var(--display); font-size: 20px; margin-bottom: 0.5rem; letter-spacing: 0.5px; color: var(--ink); }
 .use-item p { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.6; }
+
+@media (min-width: 1024px) {
+  .use-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
 
 @media (max-width: 768px) {
   .hero { padding: 4rem 1.25rem 3rem; }
