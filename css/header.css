@@ -9,7 +9,7 @@
    Provides: padding, h1 display typography, h1 em accent, p weight/line-height
    Override: background, color, p font-size, p max-width per page ── */
 .page-hero {
-  padding: 6rem 2.5rem 4rem;
+  padding: 2.5rem 2.5rem 4rem;
 }
 .page-hero h1 {
   font-family: var(--display);
@@ -25,7 +25,7 @@
   line-height: 1.6;
 }
 @media (max-width: 768px) {
-  .page-hero { padding: 4rem 1.25rem 3rem; }
+  .page-hero { padding: 2rem 1.25rem 3rem; }
 }
 
 /* ── Card Base ──
@@ -434,9 +434,31 @@ body[data-page="about"] .status-badge {
 body[data-page="technology"] .tech-hero {
   background: var(--ink);
   color: #fff;
+  position: relative;
+  overflow: hidden;
   /* padding, h1 typography provided by .page-hero */
 }
-body[data-page="technology"] .tech-hero p { color: #999; max-width: 560px; }
+body[data-page="technology"] .tech-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 39px,
+    rgba(255,255,255,0.03) 39px,
+    rgba(255,255,255,0.03) 40px
+  );
+  pointer-events: none;
+}
+body[data-page="technology"] .tech-hero .section-label,
+body[data-page="technology"] .tech-hero h1,
+body[data-page="technology"] .tech-hero p {
+  position: relative;
+  z-index: 1;
+}
+body[data-page="technology"] .tech-hero h1 { color: #fff; }
+body[data-page="technology"] .tech-hero p { color: #a8a8a8; max-width: 560px; font-size: 18px; font-weight: 300; margin-top: 1.5rem; }
 body[data-page="technology"] .layers { padding: 0 2.5rem 5rem; }
 body[data-page="technology"] .tech-layer {
   display: grid;

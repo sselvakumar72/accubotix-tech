@@ -38,15 +38,15 @@
 
 .brand-highlight {
   background: #0a0d0f;
-  padding: 2px 8px;
-  border-radius: 4px;
+  padding: 2px 2px;
+  border-radius: 8px;
   display: inline-block;
 }
 
 [data-brand] {
   background: #0a0d0f;
-  padding: 2px 8px;
-  border-radius: 12px;
+  padding: 2px 2px;
+  border-radius: 8px;
   display: inline-block;
 }
 
