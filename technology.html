@@ -7,161 +7,7 @@
   <meta name="description" content="Four integrated technology layers — from physical sensing to cloud intelligence. The science behind AccuBotix's autonomous pipeline inspection platform." />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/footer.css" />
-  <style>
-    /* ── Tech Hero ── */
-    .tech-hero {
-      background: var(--ink);
-      color: #fff;
-      padding: 6rem 2.5rem 4rem;
-    }
-    .tech-hero h1 {
-      font-family: var(--display);
-      font-size: clamp(52px, 7vw, 96px);
-      line-height: 0.95;
-      letter-spacing: 2px;
-      margin-bottom: 1.5rem;
-    }
-    .tech-hero h1 em { color: var(--accent); font-style: normal; }
-    .tech-hero p { font-size: 17px; color: #999; max-width: 560px; font-weight: 300; }
-
-    /* ── Tech Layers ── */
-    .layers { padding: 0 2.5rem 5rem; }
-    .tech-layer {
-      display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: 3rem;
-      padding: 3.5rem 0;
-      border-bottom: 1px solid var(--border);
-      align-items: start;
-    }
-    .tech-layer:last-child { border-bottom: none; }
-    .layer-num {
-      font-family: var(--display);
-      font-size: 90px;
-      color: var(--border);
-      line-height: 1;
-    }
-    .layer-content h3 {
-      font-family: var(--display);
-      font-size: 36px;
-      margin-bottom: 0.8rem;
-      letter-spacing: 0.5px;
-    }
-    .layer-content p {
-      font-size: 15px;
-      color: var(--muted);
-      font-weight: 300;
-      max-width: 700px;
-      margin-bottom: 1.5rem;
-      line-height: 1.75;
-    }
-
-    /* ── Data Flow Pipeline ── */
-    .pipeline-section {
-      background: var(--ink);
-      padding: 4rem 2.5rem;
-    }
-    .pipeline-section h2 {
-      font-family: var(--display);
-      font-size: 36px;
-      color: #fff;
-      margin-bottom: 0.5rem;
-      letter-spacing: 1px;
-    }
-    .pipeline-section .sub {
-      font-family: var(--mono);
-      font-size: 12px;
-      color: #666;
-      letter-spacing: 2px;
-      margin-bottom: 3rem;
-    }
-    .flow-track {
-      display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      gap: 0;
-      position: relative;
-    }
-    .flow-step {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-    }
-    .flow-step:not(:last-child)::after {
-      content: '→';
-      position: absolute;
-      right: -10px;
-      top: 14px;
-      color: var(--accent);
-      font-size: 16px;
-      z-index: 1;
-    }
-    .flow-dot {
-      width: 44px;
-      height: 44px;
-      background: var(--accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--mono);
-      font-size: 13px;
-      font-weight: 500;
-      color: #fff;
-      margin-bottom: 0.8rem;
-      flex-shrink: 0;
-    }
-    .flow-label {
-      font-size: 11px;
-      color: #888;
-      font-family: var(--mono);
-      letter-spacing: 0.5px;
-      text-align: center;
-      line-height: 1.4;
-    }
-
-    /* ── Simulation Stack ── */
-    .sim-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-    .sim-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 2rem;
-    }
-    .sim-card h4 {
-      font-family: var(--display);
-      font-size: 22px;
-      margin-bottom: 0.6rem;
-      letter-spacing: 0.5px;
-    }
-    .sim-card .sim-role {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--accent);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 0.8rem;
-    }
-    .sim-card p { font-size: 14px; color: var(--muted); font-weight: 300; line-height: 1.65; }
-
-    @media (max-width: 768px) {
-      .tech-hero { padding: 4rem 1.25rem 3rem; }
-      .layers { padding: 0 1.25rem 3.5rem; }
-      .tech-layer { grid-template-columns: 1fr; gap: 0; }
-      .layer-num { font-size: 60px; margin-bottom: 0.5rem; }
-      .flow-track { grid-template-columns: repeat(4, 1fr); row-gap: 2rem; }
-      .pipeline-section { padding: 3rem 1.25rem; }
-    }
-    @media (max-width: 480px) {
-      .flow-track { grid-template-columns: repeat(2, 1fr); }
-      .flow-step:not(:last-child)::after { display: none; }
-    }
-  </style>
+  <link rel="stylesheet" href="css/header.css" />
 </head>
 <body data-page="technology">
 
@@ -169,7 +15,7 @@
   <header id="site-header"></header>
 
   <!-- Hero -->
-  <div class="tech-hero">
+  <div class="tech-hero page-hero">
     <div class="section-label">Under the Hood</div>
     <h1>THE SCIENCE<br>OF <em>CERTAIN</em><br>INSPECTION.</h1>
     <p>Four integrated technology layers — from physical sensing to cloud intelligence — engineered to work as one coherent system.</p>
@@ -276,22 +122,22 @@
     <div class="section-title">Simulate before you build. Validate before you deploy.</div>
     <p class="section-body">AccuBotix develops and validates all navigation algorithms and AI fusion logic in a physics-accurate Gazebo Harmonic simulation before committing to physical hardware — dramatically reducing prototype iterations and cost.</p>
     <div class="sim-grid">
-      <div class="sim-card">
+      <div class="sim-card card-base">
         <div class="sim-role">Middleware</div>
         <h4>ROS 2 Humble</h4>
         <p>Core robot middleware — identical stack used in simulation and on the physical crawler. Sensor topics, navigation commands, and AI module interfaces are identical in both environments.</p>
       </div>
-      <div class="sim-card">
+      <div class="sim-card card-base">
         <div class="sim-role">Physics Simulation</div>
         <h4>Gazebo Harmonic</h4>
         <p>3D physics simulation with accurate friction coefficients for DN100 cast iron pipe. CI bend sections, inclines, and the vertical riser are all modelled with real-world surface properties.</p>
       </div>
-      <div class="sim-card">
+      <div class="sim-card card-base">
         <div class="sim-role">Navigation</div>
         <h4>Nav2 Stack</h4>
         <p>Autonomous path planning through 90° and 45° bends validated in simulation first. Dead-reckoning drift quantified, RFID reset accuracy tested, odometry error logged per metre.</p>
       </div>
-      <div class="sim-card">
+      <div class="sim-card card-base">
         <div class="sim-role">Visualisation</div>
         <h4>RViz2</h4>
         <p>Real-time visualisation of sensor data, pose estimation, and defect detections during simulation runs. Used to validate Bayesian fusion output against injected defect ground truth.</p>
