@@ -349,7 +349,7 @@
 .use-item p { font-size: 13px; color: var(--muted); font-weight: 300; line-height: 1.6; }
 
 @media (min-width: 1024px) {
-  .use-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .use-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
 @media (max-width: 768px) {

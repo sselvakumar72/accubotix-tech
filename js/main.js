@@ -10,35 +10,6 @@ const BRAND_OBJECT = {
 function getBrandMarkup(variant) {
   return BRAND_OBJECT[variant] || BRAND_OBJECT.plain;
 }
-(function () {
-  const head = document.head;
-  if (!head) return;
-
-  const href = 'images/logos/AccuBotix%20Technologix%20Favicon.png';
-
-  if (!head.querySelector('link[rel="icon"]')) {
-    const icon = document.createElement('link');
-    icon.rel = 'icon';
-    icon.href = href;
-    icon.setAttribute('sizes', '16x16 32x32 48x48');
-    head.appendChild(icon);
-  }
-
-  if (!head.querySelector('link[rel="apple-touch-icon"]')) {
-    const apple = document.createElement('link');
-    apple.rel = 'apple-touch-icon';
-    apple.href = href;
-    apple.setAttribute('sizes', '180x180');
-    head.appendChild(apple);
-  }
-
-  if (!head.querySelector('link[rel="manifest"]')) {
-    const manifest = document.createElement('link');
-    manifest.rel = 'manifest';
-    manifest.href = '/site.webmanifest';
-    head.appendChild(manifest);
-  }
-})();
 
 /* ── Shared header + active nav state ── */
 (function () {
@@ -166,9 +137,22 @@ if (contactForm) {
   // Show a slide immediately on page load.
   setActiveSlide(currentIndex);
 
-  setInterval(function () {
+  var autoPlay = setInterval(function () {
     currentIndex = (currentIndex + 1) % slides.length;
     setActiveSlide(currentIndex);
   }, 3000);
+
+  dots.forEach(function (dot, i) {
+    dot.addEventListener('click', function () {
+      currentIndex = i;
+      setActiveSlide(currentIndex);
+      // Reset the timer so auto-advance doesn't fire immediately after manual navigation
+      clearInterval(autoPlay);
+      autoPlay = setInterval(function () {
+        currentIndex = (currentIndex + 1) % slides.length;
+        setActiveSlide(currentIndex);
+      }, 3000);
+    });
+  });
 })();
 
