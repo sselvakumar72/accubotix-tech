@@ -86,24 +86,70 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
   });
 });
 
-/* ── Contact form submission (stub — wire to backend) ── */
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
+/* ── Contact form submission via EmailJS ── */
+(function () {
+  var contactForm = document.getElementById('contact-form');
+  if (!contactForm) return;
+
+  // Always intercept submit so the page never reloads / appends query params
   contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    const btn = contactForm.querySelector('.btn-primary');
-    const original = btn.textContent;
-    btn.textContent = 'Message sent ✓';
-    btn.style.background = '#1a4a6b';
+
+    var btn = contactForm.querySelector('.btn-primary');
+    var original = btn.textContent;
+
+    // Guard: EmailJS library must be loaded
+    if (typeof emailjs === 'undefined') {
+      btn.textContent = 'Email service unavailable ✗';
+      btn.style.background = '#d9534f';
+      setTimeout(function () {
+        btn.textContent = original;
+        btn.style.background = '';
+      }, 4000);
+      console.error('EmailJS library not loaded.');
+      return;
+    }
+
+    // Initialize EmailJS with your public key
+    emailjs.init({ publicKey: 'aXVWJejZqQ3RC6JVV' });
+
+    var formData = {
+      name:     document.getElementById('name').value,
+      company:  document.getElementById('company').value,
+      email:    document.getElementById('email').value,
+      phone:    document.getElementById('phone').value,
+      interest: document.getElementById('interest').value || 'Not specified',
+      pipeline: document.getElementById('pipeline').value || 'Not provided',
+      message:  document.getElementById('message').value,
+      to_email: 'inquiry@accubotix-tech.com'
+    };
+
+    btn.textContent = 'Sending…';
     btn.disabled = true;
-    setTimeout(function () {
-      btn.textContent = original;
-      btn.style.background = '';
-      btn.disabled = false;
-      contactForm.reset();
-    }, 4000);
+
+    emailjs.send('service_l4fuv1h', 'template_clxht8n', formData)
+      .then(function () {
+        btn.textContent = 'Message sent ✓';
+        btn.style.background = '#1a4a6b';
+        setTimeout(function () {
+          btn.textContent = original;
+          btn.style.background = '';
+          btn.disabled = false;
+          contactForm.reset();
+        }, 4000);
+      })
+      .catch(function (error) {
+        console.error('EmailJS Error:', error);
+        btn.textContent = 'Failed to send ✗';
+        btn.style.background = '#d9534f';
+        setTimeout(function () {
+          btn.textContent = original;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 4000);
+      });
   });
-}
+})();
 
 /* ── Hero image slider ── */
 (function () {
@@ -155,4 +201,3 @@ if (contactForm) {
     });
   });
 })();
-
