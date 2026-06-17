@@ -1,0 +1,306 @@
+
+
+
+Pipelines fail silently beneath insulation, beyond visibility, and outside the reach of conventional inspection. AccuBotix [SK1.1]deploys AI-powered autonomous crawlers to inspect live pipelines in real time. It detects corrosion, cracks, leaks, and structural anomalies before they create operational threats. 
+Key Specifications: 
+•	±0.1 mm thickness accuracy
+•	360° visual + thermal coverage 
+•	3× sensor fusion- fewer false alarms 
+From Hidden Corrosion to Predictable Prevention
+	Corrosion under insulation is often referred to as an invisible killer. It causes over $7 billion in pipeline failures globally each year. Traditional manual inspection methods remain slow, dangerous, and often incomplete, leaving critical risks undetected until failure occurs. 
+Accubotix [SK2.1]handles this challenge with an autonomous, continuous, and highly certain inspection method. It also enables smarter detection, proactive prevention, and a novel standard in pipeline integrity management. 
+Old vs New 
+THE OLD WAY: 
+•	Manual inspection teams access one segment at a time.
+•	Insulation is removed, inspected, and reinstalled — resulting in weeks of downtime. 
+•	No detection occurs until corrosion is already severe.
+•	Human error leads to inconsistent data, with no historical record preserved.
+•	Maintenance remains reactive — fixing what has already broken.
+•	High cost, high risk, & low coverage remain ongoing challenges.
+THE ACCUBOTIX [SK3.1]WAY
+•	Autonomous crawlers traverse live pipelines continuously.
+•	It inspects through insulation — zero removal required.
+•	It detects defects at sub-millimetre precision, in real time.
+•	Every scan is geotagged, timestamped, & stored in a digital twin. 
+•	Predictive failure modelling — act before damage occurs.
+•	A fraction of the cost. Zero unplanned shutdowns. 
+WHY ACCUBOTIX[SK4.1]? 
+	Traditional inspection tools rely on a single data source, often limiting accuracy. AccuBotix [SK5.1]combines visual, thermal, and acoustic sensing through a Bayesian AI engine, cross-validating every finding to minimize false positives & deliver a prioritized, actionable repair strategy. 
+Visual AI
+It holds a 360° 4K ring camera with CNN-powered crack and corrosion detection. It detects surface anomalies invisible to the human eye at high speed.
+Thermal Sensing
+The LWIR microbolometer identifies leaks and blockages through insulation. It detects temperature variations as small as 1°C without stripping. 
+Acoustic Emission
+It detects active cracks using AE and ultrasonic sensors. It measures wall thickness to ±0.1 mm while uncovering hidden corrosion early.
+Edge AI
+NVIDIA Jetson Orin NX processes three sensor streams onboard at over 5 FPS per module. Delivers real-time results with no cloud dependency and no latency.
+Digital Asset Twin
+Each defect is mapped to a Segment ID with accurate distance markers. Use pipe material, age, and repair history to predict remaining useful life. 
+Auto-Reports + CMMS
+Inspection reports are automatically generated after each run, with repair priorities ranked. Work orders are triggered directly in CMMS/ERP when limits are exceeded. No manual admin needed.
+	“Pipelines will corrode. The risk is not seeing it in time. AccuBotix helps detect failures before they become catastrophes.” 
+AccuBotix is engineered for oil & gas, petrochemical, and industrial plant operators.
+Industry Applications
+	Built for the toughest pipeline environments.
+01  Upstream Oil & Gas
+Inspect wellhead flow lines, gathering networks, and offshore topside piping. It performs full-diameter inspections without shutting down production. 
+02 Refineries & Petrochemical
+Monitor high-pressure process piping carrying hot fluids. Continuously detect wall loss, even through insulation and lagging. 
+03  LNG & Gas Transmission 
+	Inspect cryogenic and high-pressure pipelines with precision. Detect condensate blockages early and identify corrosion risks before failure occurs.
+04 Industrial Plants 
+	Monitor steam distribution, cooling water, and utility pipelines with confidence. Built for power plants, chemical facilities, and industrial manufacturing operations. 
+                       ABOUT US 
+We build for the pipelines nobody sees.
+Billions of dollars in pipeline infrastructure remain hidden beneath insulation.
+	 AccuBotix was started on a simple belief: the industry needs a better solution than stripping insulation, repairing blindly, and hoping for the best.
+Our Mission
+	Our mission is to transform every metre of industrial pipeline into an asset that can be inspected, tracked, and predicted — with zero facility downtime. 
+Status
+	Active development 
+Advancing next- generation robotic inspection technology through continuous development and validation. 
+Founded 
+	It was established in 2025 to transform pipeline inspection with intelligent, non- intrusive sensing solutions. 
+Headquarters 
+	Bangalore, Karnataka- India 
+Located in one of India’s premier technology & engineering hubs. 
+Test Facility 
+	4- Environment Testing Rig- Bangalore
+Advanced multi-environment facility built to test and validate performance under real-world conditions.
+Target Market
+Oil & Gas · Petrochemical · Industrial
+Built to serve critical infrastructure operators across the above-mentioned high-risk industrial sectors. 
+The Story Behind AccuBotix 
+	It began with a simple question: Why is corrosion often found only after damage has already happened? 
+	That question came up repeatedly across refinery and petrochemical operations. Existing inspection methods were often slow, reactive, and difficult to scale. A better approach was needed. 
+AccuBotix was started in Bengaluru to develop a smarter solution. An autonomous system was designed to inspect live pipelines and integrate multiple sensor inputs. It helps operators detect risks before failures occur. That vision became the foundation of the AX-1 crawler. 
+	Today, we are developing and testing the AX-1 through a dedicated 4-environment test facility, which includes physical testing, sensor integration, crawler track validation, and digital simulation.
+	Every stage of development is designed to validate performance, improve reliability, and ensure that the system meets the demands of oil & gas, refinery, and industrial plant operators.
+Our Core Principles
+	Four principles. No exceptions.
+Physics- driven Engineering 
+Every design decision is grounded in sensor science, materials behavior, and real-world engineering. We test against known defects & verify performance with measurable results.
+Uncompromising accuracy
+We set clear accuracy targets and engineers to meet them. Performance is built on proven precision, not marketing claims. 
+Operator- centric design 
+	Inspection data only matters when it drives action. Our platform is designed to deliver clear insights, ranked priorities, and automated workflows for operators. 
+Built in India. Ready for the World.
+Designed and developed in Bengaluru. Engineered for demanding industrial conditions and built to scale globally. 
+“Corrosion doesn’t announce itself. We build the systems that do.”— AccuBotix Founding Team, Bengaluru · 2025
+                    CORE TECHNOLOGY 
+The Science of Certain Inspection
+Four integrated technology layers from physical sensing to cloud intelligence that are designed to operate as one unified system.
+01 Crawler Platform 
+•	The AccuBotix crawler is a 4WD spring-loaded chassis designed for DN100 cast iron pipelines.
+•	Independent spring-loaded wheels maintain constant grip through aluminium cladding, even on 30° inclines and on vertical risers. 
+•	An articulated hinge mechanism allows the crawler to move through 90° and 45° bends.
+•	This helps prevent wheel slip and avoids sensor head collision during inspection. 
+•	Odometry is managed using quad encoder wheels and MPU-9250 IMU dead reckoning. RFID position resets at every pipe joint, providing sub-centimeter location accuracy. This accuracy is maintained throughout the full 3.5-hour inspection run.
+1.	Crawler Platform Specifications 
+•	4WD Spring-Loaded Wheel Drive
+•	Designed for DN100 Cast Iron Pipelines
+•	Traverses 90° and 45° Pipe Bends
+•	Rated for 30° Incline Operation
+•	Handles 1 m Vertical Risers
+•	RFID-Based Odometry Position Reset
+•	Integrated MPU-9250 IMU Navigation
+•	Up to 3.5 Hours Battery Runtime
+02  Trimodal Sensor Suite
+Three independently validated sensing modalities are integrated into a single crawler head, capturing data simultaneously. The 4K 360° visual ring detects surface cracks and corrosion in real time.
+The LWIR micro bolometer (8–14 μm) reads thermal signatures through intact insulation to detect leaks, blockages, and corrosion-under-insulation (CUI) hot spots.
+*No stripping is required.
+The dual-mode acoustic emission and ultrasonic sensor uses TDOA source localization to detect active cracks. It also performs pulse-echo thickness gauging to detect sub-surface wall loss at ±0.1 mm resolution. All three sensing modalities operate in parallel, delivering data in real time.
+Sensor suite applications 
+•	4K 360° Visual Ring Imaging
+•	LWIR Thermal Sensing (8–14 μm)
+•	≥1°C Thermal Sensitivity
+•	40 kHz Acoustic Emission Sensor
+•	±0.1 mm Wall Thickness Measurement
+•	TDOA-Based Crack Localization
+•	Corrosion-Under-Insulation (CUI) Detection
+03 Edge AI - Jetson Orin NX 
+        Three AI modules run in parallel on the NVIDIA Jetson Orin NX 8GB onboard system. A CNN vision model analyzes the visual stream at over 5 FPS. A statistical thermal anomaly engine processes the FLIR thermal feed. An FFT + LSTM classifier interprets acoustic emission patterns to identify crack and leak signatures. 
+	All three outputs feed into a Bayesian sensor fusion engine for cross-validation of detections. Findings confirmed by two or more sensing modalities are elevated to the repair priority list. Single-modality detections are flagged for human review and further assessment. This approach delivers near-zero false positives with zero cloud dependency during inspection. Dual 512 GB industrial micro SD cards provide mirrored, encrypted storage for secure data protection. Even if a single card fails, inspection data remains protected and cannot be lost.
+Edge & AI Computing Specifications: 
+•	Bayesian Sensor Fusion Engine
+•	CNN-Based Vision Model
+•	Statistical Thermal Analysis Engine
+•	FFT + LSTM Acoustic Classifier
+•	Processing at >5 FPS per Module
+•	NVIDIA Jetson Orin NX 8GB Compute Platform
+•	Dual 512 GB Mirrored Data Storage
+•	ROS 2 Humble Robotics Framework
+
+04 Cloud Principles & Digital Twin 
+After each run, the crawler transfers 3.5 hours of triple sensor recorded data to AWS S3  or Cloud storage over Wi-Fi in under 30 minutes. A GPU inference pipeline processes the data and attaches Segment ID metadata to every defect record.
+This links every finding to its precise pipe location. 	
+The web dashboard displays live alerts and auto-generated PDF inspection reports, and CMMS/ERP work order triggers when thresholds are breached.  
+	Each pipe segment maintains its own digital twin, including material grade, age, operating temperature, full defect history, and a remaining useful life (RUL) estimate updated after every inspection run. 
+	This enables predictive maintenance at the asset level.
+Cloud & Asset Intelligence Specifications
+•	Digital Asset Twin
+•	AWS S3 / Azure Blob Integration
+•	Automated PDF Inspection Reports
+•	CMMS / ERP Work Order Integration
+•	RUL Predictive Modeling
+•	Segment ID Defect Metadata
+•	<30 Minute Data Offload
+Data Flow
+From Crawler to Work Order — End-to-End
+1.	Sensor Capture
+2.	Edge AI Processing (Jetson)
+3.	Bayesian Sensor Fusion
+4.	Wi-Fi Data Offload
+5.	Cloud Storage
+6.	GPU Inference Processing
+7.	Automated PDF Report Generation
+8.	CMMS / ERP Work Order
+Digital Twin
+Simulate before you build. Validate before you deploy.
+AccuBotix develops and validates navigation algorithms and AI fusion logic in a physics-accurate Gazebo Harmonic simulation before moving to physical hardware.
+This helps reduce prototype iterations, lower development costs, and improve system validation before deployment.
+Middleware
+ROS 2 Humble
+ Core robot middleware is used in both simulation and the physical crawler.
+Sensor topics, navigation commands, and AI module interfaces remain identical across both environments.
+Physics Simulation
+Gazebo Harmonic
+ 3D physics simulation with accurate friction coefficients for DN100 cast iron pipe.
+CI bend sections, inclines, and vertical risers are modeled with the help of real-world surface properties.
+Navigation
+Nav2 Stack
+ Autonomous path planning through 90° and 45° bends is validated in simulation first.
+ Dead-reckoning drift is quantified, RFID reset accuracy is tested, and odometry error is logged per meter.
+Visualization
+RViz2
+ Real-time visualization of sensor data, pose estimation, and defect detections during simulation runs.
+ It used to validate Bayesian fusion output against injected defect ground truth. 
+Product
+The Crawler
+One System. Total Visibility.
+AccuBotix AX-1 is an autonomous inspection crawler purpose-built for insulated cast iron pipelines in oil & gas and industrial environments. It is specially designed for live operating conditions. AX-1 combines mobility, sensing, edge AI, and cloud intelligence in a single inspection platform. 
+AccuBotix AX-1 Crawler
+Autonomous Pipeline Inspection Platform
+The AX-1 is a ruggedized 4WD autonomous crawler designed to traverse DN100 cast iron pipelines under live operating conditions.
+Spring-loaded wheel assemblies maintain constant grip through aluminium cladding, including inclines up to 30° and 1-meter vertical risers. An articulated chassis enables navigation through 90° and 45° elbows without requiring pipeline shutdown or insulation removal.
+Platform Specifications
+•	Target Pipe: DN100 Cast Iron (4")
+•	Drive System: 4WD Spring-Loaded Wheels
+•	Maximum Incline: 30° Continuous
+•	Vertical Capability: 1 m Vertical Riser
+•	Bend Traversal: 90° and 45° Elbows
+•	Battery Life: ~3.5 Hours Continuous
+•	Compute: NVIDIA Jetson Orin NX 8GB
+•	Storage: Dual 512 GB Industrial micro SD (Mirrored)
+•	Odometry: Quad Encoders + MPU-9250 IMU
+•	Position Accuracy: Sub-Centimeter (RFID + Dead Reckoning)
+•	RFID Resets: At Every Pipe Joint
+•	Communication: Wi-Fi Offload Post-Run
+Key Advantages
+•	No Pipeline Shutdown
+•	Inspects Through Insulation
+•	Zero Insulation Removal
+Trimodal Sensor Head
+Visual · Thermal · Acoustic — Simultaneous
+The AX-1 sensor head captures visual, thermal, and acoustic data simultaneously. Each sensing modality feeds independent AI models running in parallel on the Jetson Orin NX, while every sensor reading is tagged with Segment ID and precise pipe distance for full spatial traceability. 
+Sensor Specifications
+•	Visual: 4K 360° Ring Camera Array
+•	Visual AI: CNN Crack and Corrosion Detection
+•	Thermal Sensor: LWIR Uncooled Micro bolometer
+•	Thermal Spectrum: 8–14 μm
+•	Thermal Sensitivity: ≥1°C Differential
+•	Thermal AI: Statistical Anomaly Engine
+•	Acoustic Mode 1: 40 kHz AE for Crack / Leak TDOA
+•	Acoustic Mode 2: Pulse-Echo UT Thickness Gauging
+•	Wall Thickness Resolution: ±0.1 mm
+•	Acoustic AI: FFT + LSTM Classifier
+•	Fusion Engine: Bayesian Multi-Modal Cross-Validation
+•	Inference Speed: >5 FPS per Modality
+AccuBotix Cloud Platform
+Dashboard · Reports · Digital Twin · CMMS Integration
+The cloud platform provides everything from raw sensor data to inspection reporting and predictive asset intelligence. Data upload completes in under 30 minutes, while each pipe segment builds a living digital twin that tracks material grade, operating conditions, defect history, and remaining useful life across inspection runs.
+Platform Capabilities
+•	Cloud Storage: AWS S3 / Azure Blob
+•	Offload Time: <30 Minutes for 3.5-Hour Session
+•	Reports: Automated PDF Reports with Defect Tables, Images, and Repair Priorities
+•	Integrations: CMMS / ERP Work Order Triggers
+•	Digital Twin: Per-Segment Asset Database
+•	Predictive Modeling: RUL + Failure Probability Forecasting
+•	Middleware: ROS 2 Humble
+•	Deployment: SaaS Subscription or On-Premise
+
+       TOOL 	    PURPOSE 	      SOURCE 
+ROS 2 Humble 	Robot middleware and sensor topic bus 	 Free 
+OpenCV 4.x 	Visual crack and corrosion detection 	       Free 
+PyTorch / TensorRT 	CNN vision model and Jetson inference 	        Free 
+Mosquitto MQTT 	Lightweight sensor data broker 	        Free 
+Node-RED 	Cloud pipeline and dashboard integration 	        Free 
+Gazebo Harmonic 	Digital twin physics simulation 	        Free 
+
+Are you ready to see the AX-1 in Action?
+Request Pricing & Demo
+Schedule a Demo
+                          CONTACT US 
+Get in Touch 
+Let’s Start the Conversation! 
+Whether you are exploring a product demo, pilot deployment, 	or partnership opportunities, our engineering team is ready to help you all the time. 
+We respond within 24 hours. 
+
+
+
+
+
+
+
+
+
+Send us a Message 
+
+Full Name: —-----------
+
+Company: —-----------
+
+Work Email: —-----------
+
+Select country Code: 
+
+Phone (Optional): —-----------
+Area of Interest
+Select one:
+•	Product Demo — AX-1 Crawler
+•	Pilot Deployment at Your Facility
+•	Technical Partnership / Integration
+•	Investment / Funding
+•	Press / Media Enquiry
+•	General Enquiry
+Project Details
+•	Pipeline Details (Optional)
+•	Message       
+Send Message →
+          We respond within 24 hours on business days. Your information is never shared with third parties.
+
+Contact Information
+•	Inquiry
+inquiry@accubotix-tech.com
+•	Headquarters
+ Bengaluru, Karnataka, India
+•	Demo & Test Facility
+ On-site pilot demonstrations available upon request
+What Happens Next?
+01 — Engineering Review
+We review your pipeline requirements and inspection challenges within 24 hours.
+02 — System Demonstration
+Live or remote demonstration of the AX-1 using our test facility.
+03 — Pilot Proposal
+A tailored pilot plan based on your pipe conditions, defect types, and reporting needs.
+04 — Deployment Planning
+Finalization of commercial terms, timeline, and integration with your CMMS/ERP systems.
+
+
+
+
+
+	
+	
+
+	
