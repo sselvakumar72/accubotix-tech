@@ -58,8 +58,10 @@ function getBrandMarkup(variant) {
   ];
 
   const footerLinks = links
-    .filter(function (item) { return item.page !== page; })
-    .map(function (item) { return '<a href="' + item.href + '">' + item.label + '</a>'; })
+    .map(function (item) {
+      const isActive = item.page === page;
+      return '<a href="' + item.href + '"' + (isActive ? ' class="active"' : '') + '>' + item.label + '</a>';
+    })
     .join('');
 
   footerMount.innerHTML = [
