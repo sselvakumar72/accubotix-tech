@@ -21,8 +21,8 @@
   <!-- Hero -->
   <div class="contact-hero page-hero">
     <div class="section-label" style="color: rgba(255,255,255,0.6);">Get in Touch</div>
-    <h1>LET'S TALK<br>PIPELINES.</h1>
-    <p>Request a product demo, discuss a pilot deployment, or explore partnership opportunities. Our engineering team responds within 24 hours.</p>
+    <h1>LET'S TALK<br>INSPECTION.</h1>
+    <p>Request a product demo, discuss a pilot deployment, submit an RFP, or explore partnership opportunities. Our engineering team responds within 24 hours.</p>
   </div>
 
   <!-- Contact Body -->
@@ -51,9 +51,20 @@
           <input type="tel" id="phone" name="phone" placeholder="+91 00000 00000" required />
         </div>
         <div class="form-field">
-          <label for="interest">Area of Interest</label>
+          <label for="product">Product</label>
+          <select id="product" name="product">
+            <option value="">Select product...</option>
+            <option value="Pipeline Inspection">Pipeline Inspection</option>
+            <option value="Partial Discharge Inspection">Partial Discharge Inspection</option>
+            <option value="Future Product">Future Product / Custom Inspection</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="interest">Inquiry Type</label>
           <select id="interest" name="interest">
             <option value="">Select one...</option>
+            <option value="Request for Proposal">Request for Proposal</option>
+            <option value="Product Demo">Product Demo</option>
             <option value="demo">Product Demo — AX-1 Crawler</option>
             <option value="pilot">Pilot Deployment at Our Facility</option>
             <option value="technical">Technical Partnership / Integration</option>
@@ -63,12 +74,12 @@
           </select>
         </div>
         <div class="form-field">
-          <label for="pipeline">Pipeline Details (Optional)</label>
-          <input type="text" id="pipeline" name="pipeline" placeholder="e.g. DN100 CI, 2 km, refinery steam lines" />
+          <label for="pipeline">Asset Details (Optional)</label>
+          <input type="text" id="pipeline" name="pipeline" placeholder="e.g. DN100 CI steam lines, MV switchgear room, transformer yard" />
         </div>
         <div class="form-field">
           <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Tell us about your pipeline infrastructure and inspection challenges..."></textarea>
+          <textarea id="message" name="message" placeholder="Tell us about your assets, inspection challenges, route constraints, and reporting needs..."></textarea>
         </div>
         <div>
           <button type="submit" class="btn-primary">Send Message →</button>
@@ -86,8 +97,8 @@
           <div class="cd-value"><a href="mailto:inquiry@accubotix-tech.com">inquiry@accubotix-tech.com</a></div>
         </div>
         <div class="contact-detail">
-          <div class="cd-label">Partnerships</div>
-          <div class="cd-value"><a href="mailto:partnerships@accubotix-tech.com">partnerships@accubotix-tech.com</a></div>
+          <div class="cd-label">Request for Proposals</div>
+          <div class="cd-value"><a href="mailto:rfp@accubotix-tech.com">rfp@accubotix-tech.com</a></div>
         </div>
         <div class="contact-detail">
           <div class="cd-label">Press &amp; Media</div>
@@ -112,11 +123,11 @@
         <div class="expect-list">
           <div class="expect-item">
             <div class="expect-num">01</div>
-            <p>Engineering call within 24 hours to understand your pipeline specifications and inspection challenges</p>
+            <p>Engineering call within 24 hours to understand your asset specifications and inspection challenges</p>
           </div>
           <div class="expect-item">
             <div class="expect-num">02</div>
-            <p>Live or remote demonstration of the AX-1 system against our test facility</p>
+            <p>Live or remote demonstration of the relevant inspection workflow against our test facility</p>
           </div>
           <div class="expect-item">
             <div class="expect-num">03</div>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Technology — AccuBotix</title>
-  <meta name="description" content="Four integrated technology layers — from physical sensing to cloud intelligence. The science behind AccuBotix's autonomous pipeline inspection platform." />
+  <title>Technology - AccuBotix</title>
+  <meta name="description" content="AccuBotix technology for robotic pipeline inspection and partial discharge inspection: mobility, sensors, AI analytics, localization, reporting, and digital asset intelligence." />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/header.css" />
@@ -12,34 +12,54 @@
 </head>
 <body data-page="technology">
 
-  <!-- Navigation -->
   <header id="site-header"></header>
 
-  <!-- Hero -->
   <div class="tech-hero page-hero">
-    <div class="section-label">Under the Hood</div>
-    <h1>THE SCIENCE<br>OF <em>CERTAIN</em><br>INSPECTION.</h1>
-    <p>Four integrated technology layers — from physical sensing to cloud intelligence — engineered to work as one coherent system.</p>
+    <div class="section-label">Technology Platform</div>
+    <h1>ONE ROBOTICS<br>CORE. TWO<br><em>INSPECTION</em><br>TRACKS.</h1>
+    <p>AccuBotix combines autonomous mobility, multi-sensor inspection, edge AI, localization, and automated reporting across Pipeline Inspection and Partial Discharge Inspection.</p>
   </div>
 
-  <!-- Technology Layers -->
-  <div class="layers">
+  <section>
+    <div class="section-label">Technology Tracks</div>
+    <div class="section-title">Built for mechanical and electrical asset health.</div>
+    <p class="section-body">The platform uses a shared engineering foundation, then applies product-specific sensors and analytics for pipeline integrity and electrical partial discharge risk.</p>
+    <div class="product-listing-grid">
+      <div class="product-listing-card">
+        <img class="product-card-image" src="images/products/pipeline-inspection.png" alt="Crawler robot inspecting an industrial pipeline" />
+        <div class="product-listing-body">
+          <h3>Pipeline Inspection</h3>
+          <p>Crawler-based inspection for leaks, cracks, corrosion, wall loss, and corrosion-under-insulation using visual, thermal, acoustic, ultrasonic, and PEC sensing.</p>
+          <a href="pipeline.html" class="btn-primary">View Pipeline</a>
+        </div>
+      </div>
+      <div class="product-listing-card">
+        <img class="product-card-image" src="images/products/partial-discharge-inspection.png" alt="Autonomous robot inspecting switchgear for partial discharge" />
+        <div class="product-listing-body">
+          <h3>Partial Discharge Inspection</h3>
+          <p>Route-based inspection for switchgear, transformers, GIS, MCCs, cable terminations, and substations using PD sensors, localization, AI diagnosis, and automated reports.</p>
+          <a href="pdi.html" class="btn-primary">View PDI</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <div class="divider"></div>
+
+  <div class="layers">
     <div class="tech-layer">
       <div class="layer-num">01</div>
       <div class="layer-content">
-        <h3>Crawler Platform</h3>
-        <p>The <span data-brand="highlight"></span> crawler is a 4WD spring-loaded chassis engineered for DN100 cast iron pipelines. Independent spring-preloaded wheels maintain constant grip through the aluminium cladding — even on 30° inclines and 1 m vertical risers. An articulated hinge mechanism allows the chassis to flex through 90° and 45° bends without wheel slip or sensor head collision.</p>
-        <p>Odometry is handled by quad encoder wheels combined with MPU-9250 IMU dead reckoning, with RFID absolute position resets at every pipe joint for sub-centimetre location accuracy across the full 3.5-hour inspection run.</p>
+        <h3>Autonomous Mobility</h3>
+        <p>Pipeline Inspection uses the AX-1 crawler: a 4WD spring-loaded chassis for DN100 cast iron pipelines, 30 degree inclines, 1 m vertical risers, and 90 degree or 45 degree bends. RFID position resets, encoder odometry, and IMU dead reckoning keep findings tied to precise pipe locations.</p>
+        <p>PDI uses an indoor autonomous wheeled robot for switchgear rooms, control rooms, substations, and electrical corridors. The robot follows approved inspection routes, avoids obstacles, stops at defined assets, and can support future rail-based deployment for long switchgear corridors.</p>
         <div class="spec-tags">
-          <span class="spec-tag accent">4WD Spring-Wheel Drive</span>
-          <span class="spec-tag">DN100 Cast Iron</span>
-          <span class="spec-tag">90° + 45° Bend Traversal</span>
-          <span class="spec-tag">30° Incline Rated</span>
-          <span class="spec-tag">1 m Vertical Riser</span>
-          <span class="spec-tag">RFID Odometry Reset</span>
-          <span class="spec-tag">MPU-9250 IMU</span>
-          <span class="spec-tag">3.5 hr Battery Life</span>
+          <span class="spec-tag accent">AX-1 Pipeline Crawler</span>
+          <span class="spec-tag">Indoor PDI Robot</span>
+          <span class="spec-tag">Predefined Routes</span>
+          <span class="spec-tag">Obstacle Avoidance</span>
+          <span class="spec-tag">RFID / SLAM / AprilTags</span>
+          <span class="spec-tag">Charging Dock Ready</span>
         </div>
       </div>
     </div>
@@ -47,17 +67,16 @@
     <div class="tech-layer">
       <div class="layer-num">02</div>
       <div class="layer-content">
-        <h3>Trimodal Sensor Suite</h3>
-        <p>Three independently validated sensing modalities mounted on a single crawler head, capturing data simultaneously. The 4K 360° visual ring detects surface cracks and corrosion in real time. The LWIR microbolometer (8–14 μm) reads thermal signatures through intact insulation to reveal leaks, blockages, and corrosion-under-insulation (CUI) hot spots — no stripping required.</p>
-        <p>The dual-mode acoustic emission + ultrasonic sensor runs TDOA source localisation for active crack detection and pulse-echo thickness gauging for sub-surface wall loss at ±0.1 mm resolution — all three modalities running in parallel, all in real time.</p>
+        <h3>Multi-Sensor Inspection</h3>
+        <p>The pipeline sensor suite combines HD visual inspection, thermal sensing, acoustic sensing, ultrasonic thickness measurement, and PEC screening. PEC enables flaw detection on insulated pipelines without removing insulation, reducing shutdown and access burden.</p>
+        <p>The PDI sensor suite combines ultrasonic PD sensing, acoustic microphone arrays, thermal imaging, AI vision, environmental monitoring, and a future UV corona camera option. Together they detect PD activity, support source localization, and provide visual and environmental context.</p>
         <div class="spec-tags">
-          <span class="spec-tag accent">4K 360° Visual Ring</span>
-          <span class="spec-tag">LWIR 8–14 μm</span>
-          <span class="spec-tag">≥1°C Thermal Sensitivity</span>
-          <span class="spec-tag">40 kHz AE Sensor</span>
-          <span class="spec-tag">±0.1 mm Wall Thickness</span>
-          <span class="spec-tag">TDOA Crack Localisation</span>
-          <span class="spec-tag">CUI Detection</span>
+          <span class="spec-tag accent">HD / 4K Vision</span>
+          <span class="spec-tag">Thermal Imaging</span>
+          <span class="spec-tag">Acoustic + Ultrasonic</span>
+          <span class="spec-tag">PEC for Insulated Pipelines</span>
+          <span class="spec-tag">Ultrasonic PD 20-100 kHz</span>
+          <span class="spec-tag">UV Corona Camera Ready</span>
         </div>
       </div>
     </div>
@@ -65,18 +84,16 @@
     <div class="tech-layer">
       <div class="layer-num">03</div>
       <div class="layer-content">
-        <h3>Edge AI — Jetson Orin NX</h3>
-        <p>Three AI modules run in parallel on the NVIDIA Jetson Orin NX 8GB onboard. A CNN vision model analyses the visual stream at &gt;5 FPS. A statistical thermal anomaly engine processes the FLIR feed. An FFT + LSTM classifier interprets acoustic emission patterns for crack and leak signatures.</p>
-        <p>All three outputs feed into a Bayesian sensor fusion engine that cross-validates detections. A finding confirmed by two or more modalities is elevated to the repair priority list. A single-modality hit is flagged for human review. The result: near-zero false positives and zero cloud dependency during inspection. Dual 512 GB industrial microSD cards provide mirrored, encrypted storage — a single card failure cannot lose data.</p>
+        <h3>Edge AI and Component Recognition</h3>
+        <p>For pipelines, edge AI cross-validates visual, thermal, acoustic, ultrasonic, and PEC evidence to reduce false positives and rank defects by maintenance priority. Findings are timestamped and associated with pipe segment metadata.</p>
+        <p>For PDI, AI imaging recognizes electrical components such as switchgear, cables, transformers, cable trays, junction boxes, and control panels before the robot applies the right sensor capture profile. PD activity is classified as no PD, low, medium, or severe.</p>
         <div class="spec-tags">
-          <span class="spec-tag accent">Bayesian Sensor Fusion</span>
-          <span class="spec-tag">CNN Vision Model</span>
-          <span class="spec-tag">Statistical Thermal Engine</span>
-          <span class="spec-tag">FFT + LSTM Acoustic</span>
-          <span class="spec-tag">&gt;5 FPS per Module</span>
-          <span class="spec-tag">NVIDIA Jetson Orin NX 8GB</span>
-          <span class="spec-tag">Dual 512 GB Mirrored Storage</span>
-          <span class="spec-tag">ROS 2 Humble</span>
+          <span class="spec-tag accent">Sensor Fusion</span>
+          <span class="spec-tag">CNN Vision</span>
+          <span class="spec-tag">Thermal Anomaly Analysis</span>
+          <span class="spec-tag">PD Severity Classification</span>
+          <span class="spec-tag">Asset Recognition</span>
+          <span class="spec-tag">Human Review Flags</span>
         </div>
       </div>
     </div>
@@ -84,69 +101,96 @@
     <div class="tech-layer">
       <div class="layer-num">04</div>
       <div class="layer-content">
-        <h3>Cloud Pipeline &amp; Digital Twin</h3>
-        <p>Post-run, the crawler offloads 3.5 hours of triple-sensor recording to AWS S3 or Azure Blob via Wi-Fi in under 30 minutes. A GPU inference pipeline processes the data and attaches Segment ID metadata to every defect record — linking precise pipe location to every finding.</p>
-        <p>The web dashboard surfaces live alerts, auto-generated PDF inspection reports, and CMMS/ERP work order triggers on threshold breach. Each pipe segment builds its own digital twin: material grade, age, operating temperature, full defect history, and a remaining-useful-life (RUL) estimate updated after every inspection run — enabling predictive maintenance at the asset level.</p>
+        <h3>Localization and Asset Mapping</h3>
+        <p>Pipeline findings are linked to Segment ID, distance markers, pipe material, operating conditions, and historical defect data. This gives maintenance teams a repeatable view of where corrosion, leaks, cracks, and wall thinning are developing.</p>
+        <p>PDI findings are linked to facility routes, asset IDs, inspection points, PD coordinates, acoustic heatmaps, thermal images, and component identity. LiDAR SLAM, Visual SLAM, QR marker navigation, or AprilTags can be used depending on the facility constraints.</p>
         <div class="spec-tags">
-          <span class="spec-tag accent">Digital Asset Twin</span>
-          <span class="spec-tag">AWS S3 / Azure Blob</span>
-          <span class="spec-tag">Auto PDF Reports</span>
-          <span class="spec-tag">CMMS / ERP Integration</span>
-          <span class="spec-tag">RUL Predictive Modelling</span>
-          <span class="spec-tag">Segment ID Metadata</span>
-          <span class="spec-tag">&lt;30 min Offload</span>
+          <span class="spec-tag accent">Segment ID Metadata</span>
+          <span class="spec-tag">Asset Location</span>
+          <span class="spec-tag">Inspection Path</span>
+          <span class="spec-tag">PD Coordinates</span>
+          <span class="spec-tag">Acoustic Heatmaps</span>
+          <span class="spec-tag">Digital Asset Map</span>
         </div>
       </div>
     </div>
 
-  </div>
-
-  <!-- Data Flow -->
-  <div class="pipeline-section">
-    <h2>DATA FLOW</h2>
-    <p class="sub">FROM CRAWLER TO WORK ORDER — END-TO-END</p>
-    <div class="flow-track">
-      <div class="flow-step"><div class="flow-dot">S</div><div class="flow-label">Sensor<br>Capture</div></div>
-      <div class="flow-step"><div class="flow-dot">E</div><div class="flow-label">Edge AI<br>Jetson</div></div>
-      <div class="flow-step"><div class="flow-dot">F</div><div class="flow-label">Bayesian<br>Fusion</div></div>
-      <div class="flow-step"><div class="flow-dot">W</div><div class="flow-label">Wi-Fi<br>Offload</div></div>
-      <div class="flow-step"><div class="flow-dot">C</div><div class="flow-label">Cloud<br>Storage</div></div>
-      <div class="flow-step"><div class="flow-dot">G</div><div class="flow-label">GPU<br>Inference</div></div>
-      <div class="flow-step"><div class="flow-dot">R</div><div class="flow-label">PDF<br>Report</div></div>
-      <div class="flow-step"><div class="flow-dot">&#10003;</div><div class="flow-label">CMMS<br>Work Order</div></div>
+    <div class="tech-layer">
+      <div class="layer-num">05</div>
+      <div class="layer-content">
+        <h3>Cloud Reports and Predictive Intelligence</h3>
+        <p>Pipeline reports can include defect tables, inspection images, thermal profiles, ultrasonic trends, PEC screening results, severity ranking, repair priorities, and CMMS or ERP work-order triggers.</p>
+        <p>PDI reports can include executive summaries, asset detail pages, PD severity, acoustic and thermal evidence, maintenance recommendations, risk evolution, inspection history, and remaining useful life indicators for electrical assets.</p>
+        <div class="spec-tags">
+          <span class="spec-tag accent">Automated PDF Reports</span>
+          <span class="spec-tag">Dashboard Alerts</span>
+          <span class="spec-tag">CMMS / ERP Integration</span>
+          <span class="spec-tag">Asset History</span>
+          <span class="spec-tag">Risk Scores</span>
+          <span class="spec-tag">RUL Modelling</span>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Digital Twin / Simulation -->
+  <div class="pipeline-section">
+    <h2>PIPELINE DATA FLOW</h2>
+    <p class="sub">FROM CRAWLER TO WORK ORDER - END TO END</p>
+    <div class="flow-track">
+      <div class="flow-step"><div class="flow-dot">S</div><div class="flow-label">Sensor<br>Capture</div></div>
+      <div class="flow-step"><div class="flow-dot">E</div><div class="flow-label">Edge AI<br>Processing</div></div>
+      <div class="flow-step"><div class="flow-dot">F</div><div class="flow-label">Sensor<br>Fusion</div></div>
+      <div class="flow-step"><div class="flow-dot">L</div><div class="flow-label">Segment<br>Location</div></div>
+      <div class="flow-step"><div class="flow-dot">C</div><div class="flow-label">Cloud<br>Storage</div></div>
+      <div class="flow-step"><div class="flow-dot">A</div><div class="flow-label">Asset<br>Twin</div></div>
+      <div class="flow-step"><div class="flow-dot">R</div><div class="flow-label">PDF<br>Report</div></div>
+      <div class="flow-step"><div class="flow-dot">W</div><div class="flow-label">Work<br>Order</div></div>
+    </div>
+  </div>
+
+  <div class="pipeline-section technology-flow-alt">
+    <h2>PDI DATA FLOW</h2>
+    <p class="sub">FROM ROUTE INSPECTION TO ASSET RISK SCORE</p>
+    <div class="flow-track">
+      <div class="flow-step"><div class="flow-dot">R</div><div class="flow-label">Route<br>Start</div></div>
+      <div class="flow-step"><div class="flow-dot">V</div><div class="flow-label">AI Vision<br>Identify</div></div>
+      <div class="flow-step"><div class="flow-dot">P</div><div class="flow-label">PD Sensor<br>Capture</div></div>
+      <div class="flow-step"><div class="flow-dot">L</div><div class="flow-label">Source<br>Localize</div></div>
+      <div class="flow-step"><div class="flow-dot">C</div><div class="flow-label">Classify<br>Severity</div></div>
+      <div class="flow-step"><div class="flow-dot">T</div><div class="flow-label">Trend<br>Compare</div></div>
+      <div class="flow-step"><div class="flow-dot">S</div><div class="flow-label">Risk<br>Score</div></div>
+      <div class="flow-step"><div class="flow-dot">A</div><div class="flow-label">Action<br>Report</div></div>
+    </div>
+  </div>
+
   <section>
-    <div class="section-label">Digital Twin</div>
-    <div class="section-title">Simulate before you build. Validate before you deploy.</div>
-    <p class="section-body"><span data-brand="highlight"></span> develops and validates all navigation algorithms and AI fusion logic in a physics-accurate Gazebo Harmonic simulation before committing to physical hardware — dramatically reducing prototype iterations and cost.</p>
+    <div class="section-label">Digital Twin and Simulation</div>
+    <div class="section-title">Validate routes, sensors, and decisions before deployment.</div>
+    <p class="section-body">AccuBotix uses simulation, digital asset records, and repeatable inspection data to reduce prototype risk and improve field reliability across both pipeline and electrical inspection workflows.</p>
     <div class="sim-grid">
       <div class="sim-card card-base">
-        <div class="sim-role">Middleware</div>
+        <div class="sim-role">Robot Middleware</div>
         <h4>ROS 2 Humble</h4>
-        <p>Core robot middleware — identical stack used in simulation and on the physical crawler. Sensor topics, navigation commands, and AI module interfaces are identical in both environments.</p>
+        <p>Common robot middleware for sensor topics, navigation commands, and inspection modules across simulation and physical systems.</p>
       </div>
       <div class="sim-card card-base">
-        <div class="sim-role">Physics Simulation</div>
-        <h4>Gazebo Harmonic</h4>
-        <p>3D physics simulation with accurate friction coefficients for DN100 cast iron pipe. CI bend sections, inclines, and the vertical riser are all modelled with real-world surface properties.</p>
+        <div class="sim-role">Physics and Route Testing</div>
+        <h4>Gazebo / Facility Models</h4>
+        <p>Pipeline bends, inclines, risers, switchgear corridors, and inspection routes can be validated before physical deployment.</p>
       </div>
       <div class="sim-card card-base">
         <div class="sim-role">Navigation</div>
-        <h4>Nav2 Stack</h4>
-        <p>Autonomous path planning through 90° and 45° bends validated in simulation first. Dead-reckoning drift quantified, RFID reset accuracy tested, odometry error logged per metre.</p>
+        <h4>Nav2, SLAM, Tags</h4>
+        <p>Pipeline odometry, RFID resets, indoor SLAM, QR markers, and AprilTags support repeatable position tracking for defect evidence.</p>
       </div>
       <div class="sim-card card-base">
-        <div class="sim-role">Visualisation</div>
-        <h4>RViz2</h4>
-        <p>Real-time visualisation of sensor data, pose estimation, and defect detections during simulation runs. Used to validate Bayesian fusion output against injected defect ground truth.</p>
+        <div class="sim-role">Visualization</div>
+        <h4>Dashboard and RViz2</h4>
+        <p>Sensor streams, route progress, asset locations, PD events, and defect detections can be reviewed visually before reports are issued.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer id="site-footer"></footer>
 
   <script src="js/main.js"></script>

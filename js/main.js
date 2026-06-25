@@ -24,15 +24,15 @@ function getBrandMarkup(variant) {
     '  <div class="nav-links">',
     '    <a href="index.html" class="hide-mobile">Home</a>',
     '    <a href="technology.html" class="hide-mobile">Technology</a>',
-    '    <a href="product.html" class="hide-mobile">Product</a>',
+    '    <a href="pipeline.html" class="hide-mobile">Pipeline</a>',
+    '    <a href="pdi.html" class="hide-mobile">PDI</a>',
     '    <a href="about.html" class="hide-mobile">About</a>',
     '    <a href="contact.html" class="nav-cta">Request Demo</a>',
     '  </div>',
     '</nav>'
   ].join('');
 
-  const page = document.body.getAttribute('data-page');
-  const currentFile = page ? page + '.html' : (window.location.pathname.split('/').pop() || 'index.html');
+  const currentFile = window.location.pathname.split('/').pop() || 'index.html';
   headerMount.querySelectorAll('.nav-links a').forEach(function (link) {
     if (link.getAttribute('href') === currentFile) {
       link.classList.add('active');
@@ -51,7 +51,8 @@ function getBrandMarkup(variant) {
   const links = [
     { href: 'index.html', label: 'Home', page: 'index' },
     { href: 'technology.html', label: 'Technology', page: 'technology' },
-    { href: 'product.html', label: 'Product', page: 'product' },
+    { href: 'pipeline.html', label: 'Pipeline Inspection', page: 'product' },
+    { href: 'pdi.html', label: 'Partial Discharge Inspection', page: 'pdi' },
     { href: 'about.html', label: 'About', page: 'about' },
     { href: 'contact.html', label: 'Contact', page: 'contact' }
   ];
@@ -113,15 +114,17 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     // Initialize EmailJS with your public key
     emailjs.init({ publicKey: 'aXVWJejZqQ3RC6JVV' });
 
+    var inquiryType = document.getElementById('interest').value || 'Not specified';
     var formData = {
       name:     document.getElementById('name').value,
       company:  document.getElementById('company').value,
       email:    document.getElementById('email').value,
       phone:    document.getElementById('phone').value,
-      interest: document.getElementById('interest').value || 'Not specified',
+      interest: inquiryType,
+      product:  document.getElementById('product') ? document.getElementById('product').value : 'Not specified',
       pipeline: document.getElementById('pipeline').value || 'Not provided',
       message:  document.getElementById('message').value,
-      to_email: 'inquiry@accubotix-tech.com'
+      to_email: inquiryType === 'Request for Proposal' ? 'rfp@accubotix-tech.com' : 'inquiry@accubotix-tech.com'
     };
 
     btn.textContent = 'Sending…';

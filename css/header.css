@@ -503,6 +503,16 @@ body[data-page="technology"] .pipeline-section {
   background: var(--ink);
   padding: 4rem 2.5rem;
 }
+body[data-page="technology"] .technology-flow-alt {
+  background: var(--accent2);
+}
+body[data-page="technology"] .technology-flow-alt .flow-dot {
+  background: #7ec8f0;
+  color: var(--ink);
+}
+body[data-page="technology"] .technology-flow-alt .flow-step:not(:last-child)::after {
+  color: #7ec8f0;
+}
 body[data-page="technology"] .pipeline-section h2 {
   font-family: var(--display);
   font-size: 36px;
@@ -652,6 +662,152 @@ body[data-page="product"] .btn-white {
 }
 body[data-page="product"] .btn-white:hover { opacity: 0.9; }
 
+/* Product listing cards used on the home page */
+.product-listing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.product-listing-card {
+  background: var(--card-bg);
+  border: 4px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.product-listing-card:hover {
+  border-color: var(--accent2);
+  transform: translateY(-10px);
+}
+.product-placeholder {
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background:
+    repeating-linear-gradient(135deg, rgba(10,13,15,0.04), rgba(10,13,15,0.04) 12px, transparent 12px, transparent 24px),
+    #ece7dd;
+  border-bottom: 1px dashed var(--border);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.product-card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: 1px solid var(--border);
+  background: #ece7dd;
+}
+.product-listing-body {
+  padding: 2rem;
+}
+.product-listing-body h3 {
+  font-family: var(--display);
+  font-size: 28px;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+.product-listing-body p {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.product-listing-body .btn-primary {
+  padding: 11px 20px;
+  font-size: 11px;
+}
+
+/* PDI page reuses product page structure with a distinct hero colour */
+body[data-page="pdi"] .product-hero {
+  background: var(--ink);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+body[data-page="pdi"] .product-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 39px,
+    rgba(255,255,255,0.03) 39px,
+    rgba(255,255,255,0.03) 40px
+  );
+  pointer-events: none;
+}
+body[data-page="pdi"] .product-hero .section-label,
+body[data-page="pdi"] .product-hero h1,
+body[data-page="pdi"] .product-hero p {
+  position: relative;
+  z-index: 1;
+}
+body[data-page="pdi"] .product-hero p {
+  color: #a8a8a8;
+  max-width: 620px;
+}
+body[data-page="pdi"] .products,
+body[data-page="pdi"] .product-card,
+body[data-page="pdi"] .product-card-header,
+body[data-page="pdi"] .product-card-body,
+body[data-page="pdi"] .spec-grid,
+body[data-page="pdi"] .spec-item,
+body[data-page="pdi"] .sw-table,
+body[data-page="pdi"] .cta-strip,
+body[data-page="pdi"] .btn-white {
+  /* PDI shares the product page component vocabulary. */
+}
+body[data-page="pdi"] .products { padding: 4rem 2.5rem 5rem; display: flex; flex-direction: column; gap: 2rem; }
+body[data-page="pdi"] .product-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+body[data-page="pdi"] .product-card-header { background: var(--ink); color: #fff; padding: 2rem 2.5rem; display: flex; align-items: center; gap: 2rem; }
+body[data-page="pdi"] .pcn { font-family: var(--display); font-size: 56px; color: var(--accent); line-height: 1; min-width: 80px; }
+body[data-page="pdi"] .product-card-header h3 { font-family: var(--display); font-size: 30px; letter-spacing: 0.5px; margin-bottom: 4px; }
+body[data-page="pdi"] .product-card-header .pck { font-family: var(--mono); font-size: 12px; color: #777; letter-spacing: 1.5px; }
+body[data-page="pdi"] .product-card-body { padding: 2.5rem; }
+body[data-page="pdi"] .product-card-body > p { font-size: 15px; color: var(--muted); font-weight: 300; max-width: 780px; margin-bottom: 2rem; line-height: 1.75; }
+body[data-page="pdi"] .spec-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+body[data-page="pdi"] .spec-item { border-left: 2px solid var(--accent); padding-left: 1rem; }
+body[data-page="pdi"] .spec-item .sk { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 3px; }
+body[data-page="pdi"] .spec-item .sv { font-size: 15px; font-weight: 500; }
+body[data-page="pdi"] .spec-points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.35rem;
+}
+body[data-page="pdi"] .spec-points li {
+  position: relative;
+  padding-left: 0.9rem;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+body[data-page="pdi"] .spec-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+body[data-page="pdi"] .cta-strip { background: var(--accent); color: #fff; padding: 4rem 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }
+body[data-page="pdi"] .cta-strip h2 { font-family: var(--display); font-size: clamp(32px, 4vw, 52px); letter-spacing: 1px; line-height: 1.0; max-width: 680px; }
+body[data-page="pdi"] .btn-white { background: #fff; color: var(--accent); padding: 14px 32px; font-family: var(--mono); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; white-space: nowrap; transition: opacity 0.2s; text-decoration: none; display: inline-block; }
+body[data-page="pdi"] .btn-white:hover { opacity: 0.9; }
+
 @media (max-width: 768px) {
   body[data-page="about"] .mission-block { padding: 4rem 1.25rem; }
   body[data-page="about"] .story-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -667,10 +823,16 @@ body[data-page="product"] .btn-white:hover { opacity: 0.9; }
   body[data-page="product"] .product-card-header { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
   body[data-page="product"] .product-card-body { padding: 1.5rem; }
   body[data-page="product"] .cta-strip { padding: 3rem 1.25rem; }
+  body[data-page="pdi"] .products { padding: 3rem 1.25rem; }
+  body[data-page="pdi"] .product-card-header { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
+  body[data-page="pdi"] .product-card-body { padding: 1.5rem; }
+  body[data-page="pdi"] .spec-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body[data-page="pdi"] .cta-strip { padding: 3rem 1.25rem; }
 }
 
 @media (max-width: 480px) {
   body[data-page="technology"] .flow-track { grid-template-columns: repeat(2, 1fr); }
   body[data-page="technology"] .flow-step:not(:last-child)::after { display: none; }
+  body[data-page="pdi"] .spec-grid { grid-template-columns: 1fr; }
 }
 
